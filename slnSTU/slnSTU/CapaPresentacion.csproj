@@ -65,10 +65,23 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="frmInicio.aspx" />
+    <Content Include="MasterPages\CSS\estilos.css" />
+    <Content Include="MasterPages\Fonts\fontawesome-webfont.svg" />
+    <Content Include="MasterPages\Fonts\GoogleFonts.txt" />
+    <Content Include="MasterPages\IMG\logo_home.png" />
+    <Content Include="MasterPages\JS\headroom.min.js" />
+    <Content Include="MasterPages\JS\jquery.min.js" />
+    <Content Include="MasterPages\JS\menu.js" />
     <Content Include="packages.config" />
     <Content Include="frmPrincipal.Master" />
     <Content Include="frmDocentePrincipal.Master" />
     <Content Include="frmSuperPrincipal.Master" />
+    <Content Include="MasterPages\Fonts\fontawesome-webfont.eot" />
+    <Content Include="MasterPages\Fonts\fontawesome-webfont.ttf" />
+    <Content Include="MasterPages\Fonts\fontawesome-webfont.woff" />
+    <Content Include="MasterPages\Fonts\fontawesome-webfont.woff2" />
+    <Content Include="MasterPages\Fonts\FontAwesome.otf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -80,6 +93,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmInicio.aspx.cs">
+      <DependentUpon>frmInicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmInicio.aspx.designer.cs">
+      <DependentUpon>frmInicio.aspx</DependentUpon>
+    </Compile>
     <Compile Include="frmPrincipal.Master.cs">
       <DependentUpon>frmPrincipal.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

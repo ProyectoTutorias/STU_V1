@@ -1,0 +1,5 @@
+D:\OneDrive - Universidad de Las Américas\Universidad\6to Semestre\STU\STU_V1\slnSTU\CapaEntidades\bin\Debug\CapaEntidades.dll
+D:\OneDrive - Universidad de Las Américas\Universidad\6to Semestre\STU\STU_V1\slnSTU\CapaEntidades\bin\Debug\CapaEntidades.pdb
+D:\OneDrive - Universidad de Las Américas\Universidad\6to Semestre\STU\STU_V1\slnSTU\CapaEntidades\obj\Debug\CapaEntidades.csprojResolveAssemblyReference.cache
+D:\OneDrive - Universidad de Las Américas\Universidad\6to Semestre\STU\STU_V1\slnSTU\CapaEntidades\obj\Debug\CapaEntidades.dll
+D:\OneDrive - Universidad de Las Américas\Universidad\6to Semestre\STU\STU_V1\slnSTU\CapaEntidades\obj\Debug\CapaEntidades.pdb

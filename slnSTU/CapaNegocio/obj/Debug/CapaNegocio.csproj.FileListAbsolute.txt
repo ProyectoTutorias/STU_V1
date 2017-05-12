@@ -1,0 +1,9 @@
+D:\OneDrive - Universidad de Las Américas\Universidad\6to Semestre\STU\STU_V1\slnSTU\CapaNegocio\bin\Debug\CapaNegocio.dll
+D:\OneDrive - Universidad de Las Américas\Universidad\6to Semestre\STU\STU_V1\slnSTU\CapaNegocio\bin\Debug\CapaNegocio.pdb
+D:\OneDrive - Universidad de Las Américas\Universidad\6to Semestre\STU\STU_V1\slnSTU\CapaNegocio\bin\Debug\CapaDatos.dll
+D:\OneDrive - Universidad de Las Américas\Universidad\6to Semestre\STU\STU_V1\slnSTU\CapaNegocio\bin\Debug\CapaEntidades.dll
+D:\OneDrive - Universidad de Las Américas\Universidad\6to Semestre\STU\STU_V1\slnSTU\CapaNegocio\bin\Debug\CapaDatos.pdb
+D:\OneDrive - Universidad de Las Américas\Universidad\6to Semestre\STU\STU_V1\slnSTU\CapaNegocio\bin\Debug\CapaEntidades.pdb
+D:\OneDrive - Universidad de Las Américas\Universidad\6to Semestre\STU\STU_V1\slnSTU\CapaNegocio\obj\Debug\CapaNegocio.csprojResolveAssemblyReference.cache
+D:\OneDrive - Universidad de Las Américas\Universidad\6to Semestre\STU\STU_V1\slnSTU\CapaNegocio\obj\Debug\CapaNegocio.dll
+D:\OneDrive - Universidad de Las Américas\Universidad\6to Semestre\STU\STU_V1\slnSTU\CapaNegocio\obj\Debug\CapaNegocio.pdb
