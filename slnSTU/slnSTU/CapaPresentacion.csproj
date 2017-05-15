@@ -67,9 +67,11 @@
   <ItemGroup>
     <Content Include="frmInicio.aspx" />
     <Content Include="MasterPages\CSS\estilos.css" />
+    <Content Include="MasterPages\CSS\login.css" />
     <Content Include="MasterPages\Fonts\fontawesome-webfont.svg" />
     <Content Include="MasterPages\Fonts\GoogleFonts.txt" />
     <Content Include="MasterPages\IMG\logo_home.png" />
+    <Content Include="MasterPages\IMG\logo_login.png" />
     <Content Include="MasterPages\JS\headroom.min.js" />
     <Content Include="MasterPages\JS\jquery.min.js" />
     <Content Include="MasterPages\JS\menu.js" />
@@ -82,6 +84,7 @@
     <Content Include="MasterPages\Fonts\fontawesome-webfont.woff" />
     <Content Include="MasterPages\Fonts\fontawesome-webfont.woff2" />
     <Content Include="MasterPages\Fonts\FontAwesome.otf" />
+    <Content Include="frmLogin.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -122,6 +125,13 @@
       <DependentUpon>frmSuperPrincipal.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmLogin.aspx.cs">
+      <DependentUpon>frmLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmLogin.aspx.designer.cs">
+      <DependentUpon>frmLogin.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">
