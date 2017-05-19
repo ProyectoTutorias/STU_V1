@@ -38,3 +38,43 @@ D:\OneDrive - Universidad de Las Américas\Universidad\6to Semestre\STU\STU_V1\s
 D:\OneDrive - Universidad de Las Américas\Universidad\6to Semestre\STU\STU_V1\slnSTU\slnSTU\obj\Debug\CapaPresentacion.csprojResolveAssemblyReference.cache
 D:\OneDrive - Universidad de Las Américas\Universidad\6to Semestre\STU\STU_V1\slnSTU\slnSTU\obj\Debug\slnSTU.dll
 D:\OneDrive - Universidad de Las Américas\Universidad\6to Semestre\STU\STU_V1\slnSTU\slnSTU\obj\Debug\slnSTU.pdb
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\roslyn\csc.exe
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\roslyn\csc.exe.config
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\roslyn\csc.rsp
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\roslyn\csi.exe
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\roslyn\csi.rsp
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\roslyn\System.AppContext.dll
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\roslyn\vbc.exe
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\roslyn\vbc.exe.config
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\roslyn\vbc.rsp
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\roslyn\VBCSCompiler.exe
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\slnSTU.dll.config
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\slnSTU.dll
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\slnSTU.pdb
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\CapaDatos.dll
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\CapaEntidades.dll
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\CapaNegocio.dll
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\CapaDatos.pdb
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\CapaEntidades.pdb
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\CapaNegocio.pdb
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\obj\Debug\CapaPresentacion.csprojResolveAssemblyReference.cache
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\obj\Debug\slnSTU.dll
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\slnSTU\obj\Debug\slnSTU.pdb

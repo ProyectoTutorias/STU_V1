@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace slnSTU
+namespace slnSTU.Estudiante
 {
 
 
-    public partial class frmPrincipal
+    public partial class frmPincipialEstudiante
     {
 
         /// <summary>

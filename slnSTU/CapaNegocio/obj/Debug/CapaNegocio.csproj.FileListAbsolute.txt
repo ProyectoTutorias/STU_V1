@@ -7,3 +7,12 @@ D:\OneDrive - Universidad de Las Américas\Universidad\6to Semestre\STU\STU_V1\s
 D:\OneDrive - Universidad de Las Américas\Universidad\6to Semestre\STU\STU_V1\slnSTU\CapaNegocio\obj\Debug\CapaNegocio.csprojResolveAssemblyReference.cache
 D:\OneDrive - Universidad de Las Américas\Universidad\6to Semestre\STU\STU_V1\slnSTU\CapaNegocio\obj\Debug\CapaNegocio.dll
 D:\OneDrive - Universidad de Las Américas\Universidad\6to Semestre\STU\STU_V1\slnSTU\CapaNegocio\obj\Debug\CapaNegocio.pdb
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\CapaNegocio\bin\Debug\CapaNegocio.dll
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\CapaNegocio\bin\Debug\CapaNegocio.pdb
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\CapaNegocio\bin\Debug\CapaDatos.dll
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\CapaNegocio\bin\Debug\CapaEntidades.dll
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\CapaNegocio\bin\Debug\CapaDatos.pdb
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\CapaNegocio\bin\Debug\CapaEntidades.pdb
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\CapaNegocio\obj\Debug\CapaNegocio.csprojResolveAssemblyReference.cache
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\CapaNegocio\obj\Debug\CapaNegocio.pdb

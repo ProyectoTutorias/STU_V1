@@ -20,5 +20,13 @@ function main() {
     $('.submenu').click(function () {
         $(this).children('.children').slideToggle();
     });
+
+    $(function () {
+        var header = document.getElementById('header');
+        var headsroom = new Headroom(header);
+        headsroom.init();
+    });
 }
+
+
 

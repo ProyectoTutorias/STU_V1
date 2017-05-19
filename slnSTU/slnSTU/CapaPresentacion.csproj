@@ -65,26 +65,29 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="frmInicio.aspx" />
-    <Content Include="MasterPages\CSS\estilos.css" />
-    <Content Include="MasterPages\CSS\login.css" />
-    <Content Include="MasterPages\Fonts\fontawesome-webfont.svg" />
-    <Content Include="MasterPages\Fonts\GoogleFonts.txt" />
-    <Content Include="MasterPages\IMG\logo_home.png" />
-    <Content Include="MasterPages\IMG\logo_login.png" />
-    <Content Include="MasterPages\JS\headroom.min.js" />
-    <Content Include="MasterPages\JS\jquery.min.js" />
-    <Content Include="MasterPages\JS\menu.js" />
+    <Content Include="Administrador\frmDefault.aspx" />
+    <Content Include="Docente\frmDefault.aspx" />
+    <Content Include="Recursos\CSS\estilos.css" />
+    <Content Include="Recursos\CSS\font-awesome.css" />
+    <Content Include="Recursos\CSS\font-awesome.min.css" />
+    <Content Include="Recursos\CSS\login.css" />
+    <Content Include="Recursos\Fonts\fontawesome-webfont.svg" />
+    <Content Include="Recursos\Fonts\GoogleFonts.txt" />
+    <Content Include="Recursos\IMG\logo_home.png" />
+    <Content Include="Recursos\IMG\logo_homeRed.png" />
+    <Content Include="Recursos\JS\headroom.min.js" />
+    <Content Include="Recursos\JS\jquery.min.js" />
+    <Content Include="Recursos\JS\menu.js" />
     <Content Include="packages.config" />
-    <Content Include="frmPrincipal.Master" />
-    <Content Include="frmDocentePrincipal.Master" />
-    <Content Include="frmSuperPrincipal.Master" />
-    <Content Include="MasterPages\Fonts\fontawesome-webfont.eot" />
-    <Content Include="MasterPages\Fonts\fontawesome-webfont.ttf" />
-    <Content Include="MasterPages\Fonts\fontawesome-webfont.woff" />
-    <Content Include="MasterPages\Fonts\fontawesome-webfont.woff2" />
-    <Content Include="MasterPages\Fonts\FontAwesome.otf" />
+    <Content Include="Docente\frmPrincipalDocente.Master" />
+    <Content Include="Administrador\frmPrincipalAdmin.Master" />
+    <Content Include="Recursos\Fonts\fontawesome-webfont.eot" />
+    <Content Include="Recursos\Fonts\fontawesome-webfont.ttf" />
+    <Content Include="Recursos\Fonts\fontawesome-webfont.woff" />
+    <Content Include="Recursos\Fonts\fontawesome-webfont.woff2" />
+    <Content Include="Recursos\Fonts\FontAwesome.otf" />
     <Content Include="frmLogin.aspx" />
+    <Content Include="Estudiante\frmPincipialEstudiante.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -96,33 +99,40 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmInicio.aspx.cs">
-      <DependentUpon>frmInicio.aspx</DependentUpon>
+    <Compile Include="Administrador\frmDefault.aspx.cs">
+      <DependentUpon>frmDefault.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="frmInicio.aspx.designer.cs">
-      <DependentUpon>frmInicio.aspx</DependentUpon>
+    <Compile Include="Administrador\frmDefault.aspx.designer.cs">
+      <DependentUpon>frmDefault.aspx</DependentUpon>
     </Compile>
-    <Compile Include="frmPrincipal.Master.cs">
-      <DependentUpon>frmPrincipal.Master</DependentUpon>
+    <Compile Include="Docente\frmDefault.aspx.cs">
+      <DependentUpon>frmDefault.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="frmPrincipal.Master.designer.cs">
-      <DependentUpon>frmPrincipal.Master</DependentUpon>
+    <Compile Include="Docente\frmDefault.aspx.designer.cs">
+      <DependentUpon>frmDefault.aspx</DependentUpon>
     </Compile>
-    <Compile Include="frmDocentePrincipal.Master.cs">
-      <DependentUpon>frmDocentePrincipal.Master</DependentUpon>
+    <Compile Include="Docente\frmPrincipalDocente.Master.cs">
+      <DependentUpon>frmPrincipalDocente.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="frmDocentePrincipal.Master.designer.cs">
-      <DependentUpon>frmDocentePrincipal.Master</DependentUpon>
+    <Compile Include="Docente\frmPrincipalDocente.Master.designer.cs">
+      <DependentUpon>frmPrincipalDocente.Master</DependentUpon>
     </Compile>
-    <Compile Include="frmSuperPrincipal.Master.cs">
-      <DependentUpon>frmSuperPrincipal.Master</DependentUpon>
+    <Compile Include="Administrador\frmPrincipalAdmin.Master.cs">
+      <DependentUpon>frmPrincipalAdmin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="frmSuperPrincipal.Master.designer.cs">
-      <DependentUpon>frmSuperPrincipal.Master</DependentUpon>
+    <Compile Include="Administrador\frmPrincipalAdmin.Master.designer.cs">
+      <DependentUpon>frmPrincipalAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Estudiante\frmPincipialEstudiante.Master.cs">
+      <DependentUpon>frmPincipialEstudiante.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Estudiante\frmPincipialEstudiante.Master.designer.cs">
+      <DependentUpon>frmPincipialEstudiante.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="frmLogin.aspx.cs">
@@ -146,6 +156,9 @@
       <Project>{455f47f5-652f-4006-9035-43659a15ebbe}</Project>
       <Name>CapaNegocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Facilitador\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

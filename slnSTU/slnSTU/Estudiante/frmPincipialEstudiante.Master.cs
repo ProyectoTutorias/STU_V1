@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace slnSTU
+namespace slnSTU.Estudiante
 {
-    public partial class frmInicio : System.Web.UI.Page
+    public partial class frmPincipialEstudiante : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
