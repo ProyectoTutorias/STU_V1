@@ -131,6 +131,7 @@ header nav ul {
         nav .logo {
             display: none;
         }
+
         nav ul {
             width: 100%;
             display: flex;
@@ -143,12 +144,16 @@ header nav ul {
         display: block;
         width: 100%;
         position: fixed;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
         top: 0;
         background: #81020e;
     }
 
         .menu_bar a {
-            display: block;
+            display: inline-block;
             padding: 20px;
             color: #ffffff;
             overflow: hidden;
@@ -157,10 +162,11 @@ header nav ul {
             text-decoration: none;
         }
 
-        .menu_bar i {
-            float: right;
+        .menu_bar .bt-bar i {
+            float: left;
             font-size: 40px;
-            margin-top: 10px;
+            margin-top: 8px;
+            align-items: flex-end;
         }
 
         .menu_bar img {
