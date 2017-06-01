@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TutoriasModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DOCENTE">
+          <Key>
+            <PropertyRef Name="ID_DOCENTE" />
+          </Key>
+          <Property Name="ID_DOCENTE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_CARRERA" Type="int" Nullable="false" />
+          <Property Name="ID_COORDINADOR" Type="int" />
+          <Property Name="ID_ROL" Type="int" Nullable="false" />
+          <Property Name="PRIMERNOMBREDOCENTE" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="SEGUNDONOMBREDOCENTE" Type="varchar" MaxLength="20" />
+          <Property Name="PRIMERAPELLIDODOCENTE" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="SEGUNDOAPELLIDODOCENTE" Type="varchar" MaxLength="20" />
+          <Property Name="EMAILDOCENTE" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="CEDULADOCENTE" Type="char" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ROL">
+          <Key>
+            <PropertyRef Name="ID_ROL" />
+          </Key>
+          <Property Name="ID_ROL" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NOMBREROL" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_DOCENTE_COORDINA_DOCENTE">
+          <End Role="DOCENTE" Type="Self.DOCENTE" Multiplicity="0..1" />
+          <End Role="DOCENTE1" Type="Self.DOCENTE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DOCENTE">
+              <PropertyRef Name="ID_DOCENTE" />
+            </Principal>
+            <Dependent Role="DOCENTE1">
+              <PropertyRef Name="ID_COORDINADOR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DOCENTE_DOCENTETI_ROL">
+          <End Role="ROL" Type="Self.ROL" Multiplicity="1" />
+          <End Role="DOCENTE" Type="Self.DOCENTE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ROL">
+              <PropertyRef Name="ID_ROL" />
+            </Principal>
+            <Dependent Role="DOCENTE">
+              <PropertyRef Name="ID_ROL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="TutoriasModelStoreContainer">
+          <EntitySet Name="DOCENTE" EntityType="Self.DOCENTE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ROL" EntityType="Self.ROL" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_DOCENTE_COORDINA_DOCENTE" Association="Self.FK_DOCENTE_COORDINA_DOCENTE">
+            <End Role="DOCENTE" EntitySet="DOCENTE" />
+            <End Role="DOCENTE1" EntitySet="DOCENTE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DOCENTE_DOCENTETI_ROL" Association="Self.FK_DOCENTE_DOCENTETI_ROL">
+            <End Role="ROL" EntitySet="ROL" />
+            <End Role="DOCENTE" EntitySet="DOCENTE" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TutoriasModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="LogInEntities" annotation:LazyLoadingEnabled="true" >
+          <EntitySet Name="DOCENTE" EntityType="TutoriasModel.DOCENTE" />
+          <AssociationSet Name="FK_DOCENTE_COORDINA_DOCENTE" Association="TutoriasModel.FK_DOCENTE_COORDINA_DOCENTE">
+            <End Role="DOCENTE" EntitySet="DOCENTE" />
+            <End Role="DOCENTE1" EntitySet="DOCENTE" />
+          </AssociationSet>
+          <EntitySet Name="ROL" EntityType="TutoriasModel.ROL" />
+          <AssociationSet Name="FK_DOCENTE_DOCENTETI_ROL" Association="TutoriasModel.FK_DOCENTE_DOCENTETI_ROL">
+            <End Role="ROL" EntitySet="ROL" />
+            <End Role="DOCENTE" EntitySet="DOCENTE" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="DOCENTE">
+          <Key>
+            <PropertyRef Name="ID_DOCENTE" />
+          </Key>
+          <Property Name="ID_DOCENTE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_CARRERA" Type="Int32" Nullable="false" />
+          <Property Name="ID_COORDINADOR" Type="Int32" />
+          <Property Name="ID_ROL" Type="Int32" Nullable="false" />
+          <Property Name="PRIMERNOMBREDOCENTE" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SEGUNDONOMBREDOCENTE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="PRIMERAPELLIDODOCENTE" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SEGUNDOAPELLIDODOCENTE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="EMAILDOCENTE" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="CEDULADOCENTE" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="DOCENTE1" Relationship="TutoriasModel.FK_DOCENTE_COORDINA_DOCENTE" FromRole="DOCENTE" ToRole="DOCENTE1" />
+          <NavigationProperty Name="DOCENTE2" Relationship="TutoriasModel.FK_DOCENTE_COORDINA_DOCENTE" FromRole="DOCENTE1" ToRole="DOCENTE" />
+          <NavigationProperty Name="ROL" Relationship="TutoriasModel.FK_DOCENTE_DOCENTETI_ROL" FromRole="DOCENTE" ToRole="ROL" />
+        </EntityType>
+        <Association Name="FK_DOCENTE_COORDINA_DOCENTE">
+          <End Type="TutoriasModel.DOCENTE" Role="DOCENTE" Multiplicity="0..1" />
+          <End Type="TutoriasModel.DOCENTE" Role="DOCENTE1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DOCENTE">
+              <PropertyRef Name="ID_DOCENTE" />
+            </Principal>
+            <Dependent Role="DOCENTE1">
+              <PropertyRef Name="ID_COORDINADOR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ROL">
+          <Key>
+            <PropertyRef Name="ID_ROL" />
+          </Key>
+          <Property Name="ID_ROL" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOMBREROL" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="DOCENTE" Relationship="TutoriasModel.FK_DOCENTE_DOCENTETI_ROL" FromRole="ROL" ToRole="DOCENTE" />
+        </EntityType>
+        <Association Name="FK_DOCENTE_DOCENTETI_ROL">
+          <End Type="TutoriasModel.ROL" Role="ROL" Multiplicity="1" />
+          <End Type="TutoriasModel.DOCENTE" Role="DOCENTE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ROL">
+              <PropertyRef Name="ID_ROL" />
+            </Principal>
+            <Dependent Role="DOCENTE">
+              <PropertyRef Name="ID_ROL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TutoriasModelStoreContainer" CdmEntityContainer="LogInEntities" >
+          <EntitySetMapping Name="DOCENTE">
+            <EntityTypeMapping TypeName="TutoriasModel.DOCENTE">
+              <MappingFragment StoreEntitySet="DOCENTE">
+                <ScalarProperty Name="CEDULADOCENTE" ColumnName="CEDULADOCENTE" />
+                <ScalarProperty Name="EMAILDOCENTE" ColumnName="EMAILDOCENTE" />
+                <ScalarProperty Name="SEGUNDOAPELLIDODOCENTE" ColumnName="SEGUNDOAPELLIDODOCENTE" />
+                <ScalarProperty Name="PRIMERAPELLIDODOCENTE" ColumnName="PRIMERAPELLIDODOCENTE" />
+                <ScalarProperty Name="SEGUNDONOMBREDOCENTE" ColumnName="SEGUNDONOMBREDOCENTE" />
+                <ScalarProperty Name="PRIMERNOMBREDOCENTE" ColumnName="PRIMERNOMBREDOCENTE" />
+                <ScalarProperty Name="ID_ROL" ColumnName="ID_ROL" />
+                <ScalarProperty Name="ID_COORDINADOR" ColumnName="ID_COORDINADOR" />
+                <ScalarProperty Name="ID_CARRERA" ColumnName="ID_CARRERA" />
+                <ScalarProperty Name="ID_DOCENTE" ColumnName="ID_DOCENTE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ROL">
+            <EntityTypeMapping TypeName="TutoriasModel.ROL">
+              <MappingFragment StoreEntitySet="ROL">
+                <ScalarProperty Name="NOMBREROL" ColumnName="NOMBREROL" />
+                <ScalarProperty Name="ID_ROL" ColumnName="ID_ROL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

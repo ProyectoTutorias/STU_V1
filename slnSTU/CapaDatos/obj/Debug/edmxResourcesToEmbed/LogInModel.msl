@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TutoriasModelStoreContainer" CdmEntityContainer="LogInEntities">
+    <EntitySetMapping Name="DOCENTE">
+      <EntityTypeMapping TypeName="TutoriasModel.DOCENTE">
+        <MappingFragment StoreEntitySet="DOCENTE">
+          <ScalarProperty Name="CEDULADOCENTE" ColumnName="CEDULADOCENTE" />
+          <ScalarProperty Name="EMAILDOCENTE" ColumnName="EMAILDOCENTE" />
+          <ScalarProperty Name="SEGUNDOAPELLIDODOCENTE" ColumnName="SEGUNDOAPELLIDODOCENTE" />
+          <ScalarProperty Name="PRIMERAPELLIDODOCENTE" ColumnName="PRIMERAPELLIDODOCENTE" />
+          <ScalarProperty Name="SEGUNDONOMBREDOCENTE" ColumnName="SEGUNDONOMBREDOCENTE" />
+          <ScalarProperty Name="PRIMERNOMBREDOCENTE" ColumnName="PRIMERNOMBREDOCENTE" />
+          <ScalarProperty Name="ID_ROL" ColumnName="ID_ROL" />
+          <ScalarProperty Name="ID_COORDINADOR" ColumnName="ID_COORDINADOR" />
+          <ScalarProperty Name="ID_CARRERA" ColumnName="ID_CARRERA" />
+          <ScalarProperty Name="ID_DOCENTE" ColumnName="ID_DOCENTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROL">
+      <EntityTypeMapping TypeName="TutoriasModel.ROL">
+        <MappingFragment StoreEntitySet="ROL">
+          <ScalarProperty Name="NOMBREROL" ColumnName="NOMBREROL" />
+          <ScalarProperty Name="ID_ROL" ColumnName="ID_ROL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

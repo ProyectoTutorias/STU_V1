@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TutoriasModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DOCENTE">
+    <Key>
+      <PropertyRef Name="ID_DOCENTE" />
+    </Key>
+    <Property Name="ID_DOCENTE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_CARRERA" Type="int" Nullable="false" />
+    <Property Name="ID_COORDINADOR" Type="int" />
+    <Property Name="ID_ROL" Type="int" Nullable="false" />
+    <Property Name="PRIMERNOMBREDOCENTE" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="SEGUNDONOMBREDOCENTE" Type="varchar" MaxLength="20" />
+    <Property Name="PRIMERAPELLIDODOCENTE" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="SEGUNDOAPELLIDODOCENTE" Type="varchar" MaxLength="20" />
+    <Property Name="EMAILDOCENTE" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="CEDULADOCENTE" Type="char" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ROL">
+    <Key>
+      <PropertyRef Name="ID_ROL" />
+    </Key>
+    <Property Name="ID_ROL" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBREROL" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_DOCENTE_COORDINA_DOCENTE">
+    <End Role="DOCENTE" Type="Self.DOCENTE" Multiplicity="0..1" />
+    <End Role="DOCENTE1" Type="Self.DOCENTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DOCENTE">
+        <PropertyRef Name="ID_DOCENTE" />
+      </Principal>
+      <Dependent Role="DOCENTE1">
+        <PropertyRef Name="ID_COORDINADOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DOCENTE_DOCENTETI_ROL">
+    <End Role="ROL" Type="Self.ROL" Multiplicity="1" />
+    <End Role="DOCENTE" Type="Self.DOCENTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ROL">
+        <PropertyRef Name="ID_ROL" />
+      </Principal>
+      <Dependent Role="DOCENTE">
+        <PropertyRef Name="ID_ROL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TutoriasModelStoreContainer">
+    <EntitySet Name="DOCENTE" EntityType="Self.DOCENTE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ROL" EntityType="Self.ROL" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_DOCENTE_COORDINA_DOCENTE" Association="Self.FK_DOCENTE_COORDINA_DOCENTE">
+      <End Role="DOCENTE" EntitySet="DOCENTE" />
+      <End Role="DOCENTE1" EntitySet="DOCENTE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DOCENTE_DOCENTETI_ROL" Association="Self.FK_DOCENTE_DOCENTETI_ROL">
+      <End Role="ROL" EntitySet="ROL" />
+      <End Role="DOCENTE" EntitySet="DOCENTE" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
