@@ -43,22 +43,25 @@ namespace slnSTU
 
                         ///Administrador
                         case 1:
-                            
+                            Response.Redirect("~/frmLogOut.aspx");
                             break;
 
 
                         //Director
                         case 2:
+                            Response.Redirect("~/frmLogOut.aspx");
                             break;
 
 
                         //Seguimiento
                         case 3:
+                            Response.Redirect("~/frmLogOut.aspx");
                             break;
 
 
                         //Docente
                         case 4:
+                            Response.Redirect("~/frmLogOut.aspx");
                             break;
 
 

@@ -4,22 +4,22 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="f2103687a1614bf393badeabbc90255f" Name="Diagram1" >
+      <Diagram DiagramId="f2103687a1614bf393badeabbc90255f" Name="Diagram1" ZoomLevel="25" >
         <EntityTypeShape EntityType="TutoriasModel.DOCENTE" Width="1.5" PointX="3.375" PointY="0.625" />
         <AssociationConnector Association="TutoriasModel.FK_DOCENTE_COORDINA_DOCENTE" />
         <EntityTypeShape EntityType="TutoriasModel.ROL" Width="1.5" PointX="1.125" PointY="1.625" />
         <AssociationConnector Association="TutoriasModel.FK_DOCENTE_DOCENTETI_ROL" />
         <EntityTypeShape EntityType="TutoriasModel.CARRERA" Width="1.5" PointX="1.125" PointY="5.625" />
-        <EntityTypeShape EntityType="TutoriasModel.ESTADOESTUDIANTE" Width="1.5" PointX="5.625" PointY="6.375" />
-        <EntityTypeShape EntityType="TutoriasModel.ESTADOPERIODO" Width="1.5" PointX="3.375" PointY="6.125" />
-        <EntityTypeShape EntityType="TutoriasModel.ESTUDIANTE" Width="1.5" PointX="5.625" PointY="11.625" />
+        <EntityTypeShape EntityType="TutoriasModel.ESTADOESTUDIANTE" Width="1.5" PointX="13.75" PointY="6.75" />
+        <EntityTypeShape EntityType="TutoriasModel.ESTADOPERIODO" Width="1.5" PointX="5.875" PointY="7.625" />
+        <EntityTypeShape EntityType="TutoriasModel.ESTUDIANTE" Width="1.5" PointX="18.875" PointY="0.5" />
         <EntityTypeShape EntityType="TutoriasModel.FACULTAD" Width="1.5" PointX="1.125" PointY="9.125" />
-        <EntityTypeShape EntityType="TutoriasModel.MATERIA" Width="1.5" PointX="5.625" PointY="8.75" />
-        <EntityTypeShape EntityType="TutoriasModel.NIVELMATERIA" Width="1.5" PointX="3.375" PointY="9" />
-        <EntityTypeShape EntityType="TutoriasModel.PARALELO" Width="1.5" PointX="5.625" PointY="15.125" />
+        <EntityTypeShape EntityType="TutoriasModel.MATERIA" Width="1.5" PointX="10.25" PointY="12.625" />
+        <EntityTypeShape EntityType="TutoriasModel.NIVELMATERIA" Width="1.5" PointX="19.625" PointY="11.875" />
+        <EntityTypeShape EntityType="TutoriasModel.PARALELO" Width="1.5" PointX="6.875" PointY="12.125" />
         <EntityTypeShape EntityType="TutoriasModel.PERIODOACADEMICO" Width="1.5" PointX="5.625" PointY="1.5" />
         <EntityTypeShape EntityType="TutoriasModel.REGISTROACADEMICO" Width="1.5" PointX="7.875" PointY="0.75" />
-        <EntityTypeShape EntityType="TutoriasModel.TUTORIA" Width="1.5" PointX="10.125" PointY="1.375" />
+        <EntityTypeShape EntityType="TutoriasModel.TUTORIA" Width="1.5" PointX="11.375" PointY="5.375" />
         <AssociationConnector Association="TutoriasModel.FK_CARRERA_FACULTADA_FACULTAD" />
         <AssociationConnector Association="TutoriasModel.FK_DOCENTE_DOCENTE_P_CARRERA" />
         <AssociationConnector Association="TutoriasModel.FK_REGISTRO_DOCENTERE_DOCENTE" />
