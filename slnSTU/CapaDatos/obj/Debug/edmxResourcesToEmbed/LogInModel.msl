@@ -25,5 +25,133 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="CARRERA">
+      <EntityTypeMapping TypeName="TutoriasModel.CARRERA">
+        <MappingFragment StoreEntitySet="CARRERA">
+          <ScalarProperty Name="CODIGOFACULTADAREACARRERA" ColumnName="CODIGOFACULTADAREACARRERA" />
+          <ScalarProperty Name="NOMBRECARRERA" ColumnName="NOMBRECARRERA" />
+          <ScalarProperty Name="CODIGOCARRERA" ColumnName="CODIGOCARRERA" />
+          <ScalarProperty Name="CODIGOAREACARRERA" ColumnName="CODIGOAREACARRERA" />
+          <ScalarProperty Name="ID_FACULTAD" ColumnName="ID_FACULTAD" />
+          <ScalarProperty Name="ID_CARRERA" ColumnName="ID_CARRERA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTADOESTUDIANTE">
+      <EntityTypeMapping TypeName="TutoriasModel.ESTADOESTUDIANTE">
+        <MappingFragment StoreEntitySet="ESTADOESTUDIANTE">
+          <ScalarProperty Name="NOMBREESTADOESTUDIANTE" ColumnName="NOMBREESTADOESTUDIANTE" />
+          <ScalarProperty Name="ID_ESTADOESTUDIANTE" ColumnName="ID_ESTADOESTUDIANTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTADOPERIODO">
+      <EntityTypeMapping TypeName="TutoriasModel.ESTADOPERIODO">
+        <MappingFragment StoreEntitySet="ESTADOPERIODO">
+          <ScalarProperty Name="NOMBREESTADOPERIODO" ColumnName="NOMBREESTADOPERIODO" />
+          <ScalarProperty Name="ID_ESTADOPERIODO" ColumnName="ID_ESTADOPERIODO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTUDIANTE">
+      <EntityTypeMapping TypeName="TutoriasModel.ESTUDIANTE">
+        <MappingFragment StoreEntitySet="ESTUDIANTE">
+          <ScalarProperty Name="CEDULAESTUDIANTE" ColumnName="CEDULAESTUDIANTE" />
+          <ScalarProperty Name="EMAILESTUDIANTE" ColumnName="EMAILESTUDIANTE" />
+          <ScalarProperty Name="NUMEROMATRICULAESTUDIANTE" ColumnName="NUMEROMATRICULAESTUDIANTE" />
+          <ScalarProperty Name="SEGUNDOAPELLIDO_ESTUDIANTE" ColumnName="SEGUNDOAPELLIDO_ESTUDIANTE" />
+          <ScalarProperty Name="PRIMERAPELLIDOESTUDIANTE" ColumnName="PRIMERAPELLIDOESTUDIANTE" />
+          <ScalarProperty Name="SEGUNDONOMBREESTUDIANTE" ColumnName="SEGUNDONOMBREESTUDIANTE" />
+          <ScalarProperty Name="PRIMERNOMBREESTUDIANTE" ColumnName="PRIMERNOMBREESTUDIANTE" />
+          <ScalarProperty Name="ID_ESTUDIANTE" ColumnName="ID_ESTUDIANTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FACULTAD">
+      <EntityTypeMapping TypeName="TutoriasModel.FACULTAD">
+        <MappingFragment StoreEntitySet="FACULTAD">
+          <ScalarProperty Name="NOMBREFACULTAD" ColumnName="NOMBREFACULTAD" />
+          <ScalarProperty Name="ID_FACULTAD" ColumnName="ID_FACULTAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MATERIA">
+      <EntityTypeMapping TypeName="TutoriasModel.MATERIA">
+        <MappingFragment StoreEntitySet="MATERIA">
+          <ScalarProperty Name="SIGLAMATERIA" ColumnName="SIGLAMATERIA" />
+          <ScalarProperty Name="NOMBREMATERIA" ColumnName="NOMBREMATERIA" />
+          <ScalarProperty Name="ID_NIVELMATERIA" ColumnName="ID_NIVELMATERIA" />
+          <ScalarProperty Name="ID_MATERIA" ColumnName="ID_MATERIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NIVELMATERIA">
+      <EntityTypeMapping TypeName="TutoriasModel.NIVELMATERIA">
+        <MappingFragment StoreEntitySet="NIVELMATERIA">
+          <ScalarProperty Name="NIVELMATERIA1" ColumnName="NIVELMATERIA" />
+          <ScalarProperty Name="ID_NIVELMATERIA" ColumnName="ID_NIVELMATERIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PARALELO">
+      <EntityTypeMapping TypeName="TutoriasModel.PARALELO">
+        <MappingFragment StoreEntitySet="PARALELO">
+          <ScalarProperty Name="NOMBREPARALELO" ColumnName="NOMBREPARALELO" />
+          <ScalarProperty Name="ID_PARALELO" ColumnName="ID_PARALELO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERIODOACADEMICO">
+      <EntityTypeMapping TypeName="TutoriasModel.PERIODOACADEMICO">
+        <MappingFragment StoreEntitySet="PERIODOACADEMICO">
+          <ScalarProperty Name="FECHAFINPERIODO" ColumnName="FECHAFINPERIODO" />
+          <ScalarProperty Name="FECHAINICIOPERIODO" ColumnName="FECHAINICIOPERIODO" />
+          <ScalarProperty Name="PERIODO" ColumnName="PERIODO" />
+          <ScalarProperty Name="ANIOPERIODO" ColumnName="ANIOPERIODO" />
+          <ScalarProperty Name="ID_ESTADOPERIODO" ColumnName="ID_ESTADOPERIODO" />
+          <ScalarProperty Name="ID_PERIODOACADEMICO" ColumnName="ID_PERIODOACADEMICO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REGISTROACADEMICO">
+      <EntityTypeMapping TypeName="TutoriasModel.REGISTROACADEMICO">
+        <MappingFragment StoreEntitySet="REGISTROACADEMICO">
+          <ScalarProperty Name="TIPOMATRICULA" ColumnName="TIPOMATRICULA" />
+          <ScalarProperty Name="NOTAEXAMENFINAL" ColumnName="NOTAEXAMENFINAL" />
+          <ScalarProperty Name="NOTAPROGRESO2" ColumnName="NOTAPROGRESO2" />
+          <ScalarProperty Name="NOTAPROGRESO1" ColumnName="NOTAPROGRESO1" />
+          <ScalarProperty Name="ID_ESTUDIANTE" ColumnName="ID_ESTUDIANTE" />
+          <ScalarProperty Name="ID_MATERIA" ColumnName="ID_MATERIA" />
+          <ScalarProperty Name="ID_PARALELO" ColumnName="ID_PARALELO" />
+          <ScalarProperty Name="ID_ESTADOESTUDIANTE" ColumnName="ID_ESTADOESTUDIANTE" />
+          <ScalarProperty Name="ID_PERIODOACADEMICO" ColumnName="ID_PERIODOACADEMICO" />
+          <ScalarProperty Name="ID_DOCENTE" ColumnName="ID_DOCENTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TUTORIA">
+      <EntityTypeMapping TypeName="TutoriasModel.TUTORIA">
+        <MappingFragment StoreEntitySet="TUTORIA">
+          <ScalarProperty Name="TIEMPOTUTORIA" ColumnName="TIEMPOTUTORIA" />
+          <ScalarProperty Name="FECHATUTORIA" ColumnName="FECHATUTORIA" />
+          <ScalarProperty Name="TEMATUTORIA" ColumnName="TEMATUTORIA" />
+          <ScalarProperty Name="ID_ESTUDIANTE" ColumnName="ID_ESTUDIANTE" />
+          <ScalarProperty Name="ID_MATERIA" ColumnName="ID_MATERIA" />
+          <ScalarProperty Name="ID_PARALELO" ColumnName="ID_PARALELO" />
+          <ScalarProperty Name="ID_ESTADOESTUDIANTE" ColumnName="ID_ESTADOESTUDIANTE" />
+          <ScalarProperty Name="ID_PERIODOACADEMICO" ColumnName="ID_PERIODOACADEMICO" />
+          <ScalarProperty Name="ID_DOCENTE" ColumnName="ID_DOCENTE" />
+          <ScalarProperty Name="ID_TUTORIA" ColumnName="ID_TUTORIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="HORASTUTORIA" TypeName="TutoriasModel.HORASTUTORIA" StoreEntitySet="HORASTUTORIA">
+      <EndProperty Name="PERIODOACADEMICO">
+        <ScalarProperty Name="ID_PERIODOACADEMICO" ColumnName="ID_PERIODOACADEMICO" />
+      </EndProperty>
+      <EndProperty Name="DOCENTE">
+        <ScalarProperty Name="ID_DOCENTE" ColumnName="ID_DOCENTE" />
+      </EndProperty>
+    </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping>
