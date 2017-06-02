@@ -12,35 +12,26 @@ namespace CapaDatos
     using System;
     using System.Collections.Generic;
     
-    public partial class DOCENTE
+    public partial class PERIODOACADEMICO
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public DOCENTE()
+        public PERIODOACADEMICO()
         {
-            this.DOCENTE1 = new HashSet<DOCENTE>();
             this.REGISTROACADEMICO = new HashSet<REGISTROACADEMICO>();
-            this.PERIODOACADEMICO = new HashSet<PERIODOACADEMICO>();
+            this.DOCENTE = new HashSet<DOCENTE>();
         }
     
-        public int ID_DOCENTE { get; set; }
-        public int ID_CARRERA { get; set; }
-        public Nullable<int> ID_COORDINADOR { get; set; }
-        public int ID_ROL { get; set; }
-        public string PRIMERNOMBREDOCENTE { get; set; }
-        public string SEGUNDONOMBREDOCENTE { get; set; }
-        public string PRIMERAPELLIDODOCENTE { get; set; }
-        public string SEGUNDOAPELLIDODOCENTE { get; set; }
-        public string EMAILDOCENTE { get; set; }
-        public string CEDULADOCENTE { get; set; }
+        public int ID_PERIODOACADEMICO { get; set; }
+        public Nullable<int> ID_ESTADOPERIODO { get; set; }
+        public string ANIOPERIODO { get; set; }
+        public string PERIODO { get; set; }
+        public System.DateTime FECHAINICIOPERIODO { get; set; }
+        public Nullable<System.DateTime> FECHAFINPERIODO { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DOCENTE> DOCENTE1 { get; set; }
-        public virtual DOCENTE DOCENTE2 { get; set; }
-        public virtual ROL ROL { get; set; }
-        public virtual CARRERA CARRERA { get; set; }
+        public virtual ESTADOPERIODO ESTADOPERIODO { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<REGISTROACADEMICO> REGISTROACADEMICO { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PERIODOACADEMICO> PERIODOACADEMICO { get; set; }
+        public virtual ICollection<DOCENTE> DOCENTE { get; set; }
     }
 }

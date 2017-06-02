@@ -49,8 +49,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CARRERA.cs">
+      <DependentUpon>LogInModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="clsDLogin.cs" />
     <Compile Include="DOCENTE.cs">
+      <DependentUpon>LogInModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ESTADOESTUDIANTE.cs">
+      <DependentUpon>LogInModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ESTADOPERIODO.cs">
+      <DependentUpon>LogInModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ESTUDIANTE.cs">
+      <DependentUpon>LogInModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FACULTAD.cs">
       <DependentUpon>LogInModel.tt</DependentUpon>
     </Compile>
     <Compile Include="LogInModel.Context.cs">
@@ -68,8 +83,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LogInModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="MATERIA.cs">
+      <DependentUpon>LogInModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NIVELMATERIA.cs">
+      <DependentUpon>LogInModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PARALELO.cs">
+      <DependentUpon>LogInModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PERIODOACADEMICO.cs">
+      <DependentUpon>LogInModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="REGISTROACADEMICO.cs">
+      <DependentUpon>LogInModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="ROL.cs">
+      <DependentUpon>LogInModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TUTORIA.cs">
       <DependentUpon>LogInModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>
