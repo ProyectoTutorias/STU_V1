@@ -27,5 +27,16 @@ namespace CapaDatos
     
         public virtual DbSet<DOCENTE> DOCENTE { get; set; }
         public virtual DbSet<ROL> ROL { get; set; }
+        public virtual DbSet<CARRERA> CARRERA { get; set; }
+        public virtual DbSet<ESTADOESTUDIANTE> ESTADOESTUDIANTE { get; set; }
+        public virtual DbSet<ESTADOPERIODO> ESTADOPERIODO { get; set; }
+        public virtual DbSet<ESTUDIANTE> ESTUDIANTE { get; set; }
+        public virtual DbSet<FACULTAD> FACULTAD { get; set; }
+        public virtual DbSet<MATERIA> MATERIA { get; set; }
+        public virtual DbSet<NIVELMATERIA> NIVELMATERIA { get; set; }
+        public virtual DbSet<PARALELO> PARALELO { get; set; }
+        public virtual DbSet<PERIODOACADEMICO> PERIODOACADEMICO { get; set; }
+        public virtual DbSet<REGISTROACADEMICO> REGISTROACADEMICO { get; set; }
+        public virtual DbSet<TUTORIA> TUTORIA { get; set; }
     }
 }
