@@ -12,3 +12,15 @@ C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\CapaDatos\bin\Debu
 C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\CapaDatos\obj\Debug\CapaDatos.csprojResolveAssemblyReference.cache
 C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\CapaDatos\obj\Debug\CapaDatos.dll
 C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Users\carme\Documents\GitHub\STU_V1\slnSTU\CapaDatos\bin\Debug\CapaDatos.dll.config
+C:\Users\carme\Documents\GitHub\STU_V1\slnSTU\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\carme\Documents\GitHub\STU_V1\slnSTU\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\carme\Documents\GitHub\STU_V1\slnSTU\CapaDatos\bin\Debug\CapaEntidades.dll
+C:\Users\carme\Documents\GitHub\STU_V1\slnSTU\CapaDatos\bin\Debug\EntityFramework.dll
+C:\Users\carme\Documents\GitHub\STU_V1\slnSTU\CapaDatos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\carme\Documents\GitHub\STU_V1\slnSTU\CapaDatos\bin\Debug\CapaEntidades.pdb
+C:\Users\carme\Documents\GitHub\STU_V1\slnSTU\CapaDatos\bin\Debug\EntityFramework.xml
+C:\Users\carme\Documents\GitHub\STU_V1\slnSTU\CapaDatos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\carme\Documents\GitHub\STU_V1\slnSTU\CapaDatos\obj\Debug\CapaDatos.csprojResolveAssemblyReference.cache
+C:\Users\carme\Documents\GitHub\STU_V1\slnSTU\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\carme\Documents\GitHub\STU_V1\slnSTU\CapaDatos\obj\Debug\CapaDatos.pdb

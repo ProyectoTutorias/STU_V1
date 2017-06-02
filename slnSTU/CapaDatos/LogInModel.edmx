@@ -1,0 +1,1008 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TutoriasModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CARRERA">
+          <Key>
+            <PropertyRef Name="ID_CARRERA" />
+          </Key>
+          <Property Name="ID_CARRERA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_FACULTAD" Type="int" Nullable="false" />
+          <Property Name="CODIGOAREACARRERA" Type="int" Nullable="false" />
+          <Property Name="CODIGOCARRERA" Type="char" MaxLength="3" Nullable="false" />
+          <Property Name="NOMBRECARRERA" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="CODIGOFACULTADAREACARRERA" Type="char" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DOCENTE">
+          <Key>
+            <PropertyRef Name="ID_DOCENTE" />
+          </Key>
+          <Property Name="ID_DOCENTE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_CARRERA" Type="int" Nullable="false" />
+          <Property Name="ID_COORDINADOR" Type="int" />
+          <Property Name="ID_ROL" Type="int" Nullable="false" />
+          <Property Name="PRIMERNOMBREDOCENTE" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="SEGUNDONOMBREDOCENTE" Type="varchar" MaxLength="25" />
+          <Property Name="PRIMERAPELLIDODOCENTE" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="SEGUNDOAPELLIDODOCENTE" Type="varchar" MaxLength="25" />
+          <Property Name="EMAILDOCENTE" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CEDULADOCENTE" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ESTADOESTUDIANTE">
+          <Key>
+            <PropertyRef Name="ID_ESTADOESTUDIANTE" />
+          </Key>
+          <Property Name="ID_ESTADOESTUDIANTE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NOMBREESTADOESTUDIANTE" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ESTADOPERIODO">
+          <Key>
+            <PropertyRef Name="ID_ESTADOPERIODO" />
+          </Key>
+          <Property Name="ID_ESTADOPERIODO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NOMBREESTADOPERIODO" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ESTUDIANTE">
+          <Key>
+            <PropertyRef Name="ID_ESTUDIANTE" />
+          </Key>
+          <Property Name="ID_ESTUDIANTE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PRIMERNOMBREESTUDIANTE" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="SEGUNDONOMBREESTUDIANTE" Type="varchar" MaxLength="20" />
+          <Property Name="PRIMERAPELLIDOESTUDIANTE" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="SEGUNDOAPELLIDO_ESTUDIANTE" Type="varchar" MaxLength="20" />
+          <Property Name="NUMEROMATRICULAESTUDIANTE" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="EMAILESTUDIANTE" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CEDULAESTUDIANTE" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FACULTAD">
+          <Key>
+            <PropertyRef Name="ID_FACULTAD" />
+          </Key>
+          <Property Name="ID_FACULTAD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NOMBREFACULTAD" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HORASTUTORIA">
+          <Key>
+            <PropertyRef Name="ID_DOCENTE" />
+            <PropertyRef Name="ID_PERIODOACADEMICO" />
+          </Key>
+          <Property Name="ID_DOCENTE" Type="int" Nullable="false" />
+          <Property Name="ID_PERIODOACADEMICO" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MATERIA">
+          <Key>
+            <PropertyRef Name="ID_MATERIA" />
+          </Key>
+          <Property Name="ID_MATERIA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_NIVELMATERIA" Type="int" Nullable="false" />
+          <Property Name="NOMBREMATERIA" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SIGLAMATERIA" Type="char" MaxLength="6" Nullable="false" />
+        </EntityType>
+        <EntityType Name="NIVELMATERIA">
+          <Key>
+            <PropertyRef Name="ID_NIVELMATERIA" />
+          </Key>
+          <Property Name="ID_NIVELMATERIA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NIVELMATERIA" Type="char" MaxLength="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PARALELO">
+          <Key>
+            <PropertyRef Name="ID_PARALELO" />
+          </Key>
+          <Property Name="ID_PARALELO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NOMBREPARALELO" Type="char" MaxLength="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PERIODOACADEMICO">
+          <Key>
+            <PropertyRef Name="ID_PERIODOACADEMICO" />
+          </Key>
+          <Property Name="ID_PERIODOACADEMICO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_ESTADOPERIODO" Type="int" />
+          <Property Name="ANIOPERIODO" Type="char" MaxLength="4" Nullable="false" />
+          <Property Name="PERIODO" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="FECHAINICIOPERIODO" Type="datetime" Nullable="false" />
+          <Property Name="FECHAFINPERIODO" Type="datetime" />
+        </EntityType>
+        <EntityType Name="REGISTROACADEMICO">
+          <Key>
+            <PropertyRef Name="ID_DOCENTE" />
+            <PropertyRef Name="ID_PERIODOACADEMICO" />
+            <PropertyRef Name="ID_ESTADOESTUDIANTE" />
+            <PropertyRef Name="ID_PARALELO" />
+            <PropertyRef Name="ID_MATERIA" />
+            <PropertyRef Name="ID_ESTUDIANTE" />
+          </Key>
+          <Property Name="ID_DOCENTE" Type="int" Nullable="false" />
+          <Property Name="ID_PERIODOACADEMICO" Type="int" Nullable="false" />
+          <Property Name="ID_ESTADOESTUDIANTE" Type="int" Nullable="false" />
+          <Property Name="ID_PARALELO" Type="int" Nullable="false" />
+          <Property Name="ID_MATERIA" Type="int" Nullable="false" />
+          <Property Name="ID_ESTUDIANTE" Type="int" Nullable="false" />
+          <Property Name="NOTAPROGRESO1" Type="decimal" Precision="3" Scale="1" />
+          <Property Name="NOTAPROGRESO2" Type="decimal" Precision="3" Scale="1" />
+          <Property Name="NOTAEXAMENFINAL" Type="decimal" Precision="3" Scale="1" />
+          <Property Name="TIPOMATRICULA" Type="char" MaxLength="1" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ROL">
+          <Key>
+            <PropertyRef Name="ID_ROL" />
+          </Key>
+          <Property Name="ID_ROL" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NOMBREROL" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TUTORIA">
+          <Key>
+            <PropertyRef Name="ID_TUTORIA" />
+          </Key>
+          <Property Name="ID_TUTORIA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_DOCENTE" Type="int" Nullable="false" />
+          <Property Name="ID_PERIODOACADEMICO" Type="int" Nullable="false" />
+          <Property Name="ID_ESTADOESTUDIANTE" Type="int" Nullable="false" />
+          <Property Name="ID_PARALELO" Type="int" Nullable="false" />
+          <Property Name="ID_MATERIA" Type="int" Nullable="false" />
+          <Property Name="ID_ESTUDIANTE" Type="int" Nullable="false" />
+          <Property Name="TEMATUTORIA" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="FECHATUTORIA" Type="datetime" Nullable="false" />
+          <Property Name="TIEMPOTUTORIA" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_CARRERA_FACULTADA_FACULTAD">
+          <End Role="FACULTAD" Type="Self.FACULTAD" Multiplicity="1" />
+          <End Role="CARRERA" Type="Self.CARRERA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FACULTAD">
+              <PropertyRef Name="ID_FACULTAD" />
+            </Principal>
+            <Dependent Role="CARRERA">
+              <PropertyRef Name="ID_FACULTAD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DOCENTE_COORDINA_DOCENTE">
+          <End Role="DOCENTE" Type="Self.DOCENTE" Multiplicity="0..1" />
+          <End Role="DOCENTE1" Type="Self.DOCENTE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DOCENTE">
+              <PropertyRef Name="ID_DOCENTE" />
+            </Principal>
+            <Dependent Role="DOCENTE1">
+              <PropertyRef Name="ID_COORDINADOR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DOCENTE_DOCENTE_P_CARRERA">
+          <End Role="CARRERA" Type="Self.CARRERA" Multiplicity="1" />
+          <End Role="DOCENTE" Type="Self.DOCENTE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CARRERA">
+              <PropertyRef Name="ID_CARRERA" />
+            </Principal>
+            <Dependent Role="DOCENTE">
+              <PropertyRef Name="ID_CARRERA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DOCENTE_DOCENTETI_ROL">
+          <End Role="ROL" Type="Self.ROL" Multiplicity="1" />
+          <End Role="DOCENTE" Type="Self.DOCENTE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ROL">
+              <PropertyRef Name="ID_ROL" />
+            </Principal>
+            <Dependent Role="DOCENTE">
+              <PropertyRef Name="ID_ROL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HORASTUT_HORASTUTO_DOCENTE">
+          <End Role="DOCENTE" Type="Self.DOCENTE" Multiplicity="1" />
+          <End Role="HORASTUTORIA" Type="Self.HORASTUTORIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DOCENTE">
+              <PropertyRef Name="ID_DOCENTE" />
+            </Principal>
+            <Dependent Role="HORASTUTORIA">
+              <PropertyRef Name="ID_DOCENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HORASTUT_HORASTUTO_PERIODOA">
+          <End Role="PERIODOACADEMICO" Type="Self.PERIODOACADEMICO" Multiplicity="1" />
+          <End Role="HORASTUTORIA" Type="Self.HORASTUTORIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERIODOACADEMICO">
+              <PropertyRef Name="ID_PERIODOACADEMICO" />
+            </Principal>
+            <Dependent Role="HORASTUTORIA">
+              <PropertyRef Name="ID_PERIODOACADEMICO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MATERIA_RELACIONM_NIVELMAT">
+          <End Role="NIVELMATERIA" Type="Self.NIVELMATERIA" Multiplicity="1" />
+          <End Role="MATERIA" Type="Self.MATERIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NIVELMATERIA">
+              <PropertyRef Name="ID_NIVELMATERIA" />
+            </Principal>
+            <Dependent Role="MATERIA">
+              <PropertyRef Name="ID_NIVELMATERIA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PERIODOA_ESTADOPER_ESTADOPE">
+          <End Role="ESTADOPERIODO" Type="Self.ESTADOPERIODO" Multiplicity="0..1" />
+          <End Role="PERIODOACADEMICO" Type="Self.PERIODOACADEMICO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ESTADOPERIODO">
+              <PropertyRef Name="ID_ESTADOPERIODO" />
+            </Principal>
+            <Dependent Role="PERIODOACADEMICO">
+              <PropertyRef Name="ID_ESTADOPERIODO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_REGISTRO_DOCENTERE_DOCENTE">
+          <End Role="DOCENTE" Type="Self.DOCENTE" Multiplicity="1" />
+          <End Role="REGISTROACADEMICO" Type="Self.REGISTROACADEMICO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DOCENTE">
+              <PropertyRef Name="ID_DOCENTE" />
+            </Principal>
+            <Dependent Role="REGISTROACADEMICO">
+              <PropertyRef Name="ID_DOCENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_REGISTRO_ESTADOEST_ESTADOES">
+          <End Role="ESTADOESTUDIANTE" Type="Self.ESTADOESTUDIANTE" Multiplicity="1" />
+          <End Role="REGISTROACADEMICO" Type="Self.REGISTROACADEMICO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ESTADOESTUDIANTE">
+              <PropertyRef Name="ID_ESTADOESTUDIANTE" />
+            </Principal>
+            <Dependent Role="REGISTROACADEMICO">
+              <PropertyRef Name="ID_ESTADOESTUDIANTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_REGISTRO_ESTUDIANT_ESTUDIAN">
+          <End Role="ESTUDIANTE" Type="Self.ESTUDIANTE" Multiplicity="1" />
+          <End Role="REGISTROACADEMICO" Type="Self.REGISTROACADEMICO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ESTUDIANTE">
+              <PropertyRef Name="ID_ESTUDIANTE" />
+            </Principal>
+            <Dependent Role="REGISTROACADEMICO">
+              <PropertyRef Name="ID_ESTUDIANTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_REGISTRO_MATERIAFO_MATERIA">
+          <End Role="MATERIA" Type="Self.MATERIA" Multiplicity="1" />
+          <End Role="REGISTROACADEMICO" Type="Self.REGISTROACADEMICO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MATERIA">
+              <PropertyRef Name="ID_MATERIA" />
+            </Principal>
+            <Dependent Role="REGISTROACADEMICO">
+              <PropertyRef Name="ID_MATERIA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_REGISTRO_PARALELOF_PARALELO">
+          <End Role="PARALELO" Type="Self.PARALELO" Multiplicity="1" />
+          <End Role="REGISTROACADEMICO" Type="Self.REGISTROACADEMICO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PARALELO">
+              <PropertyRef Name="ID_PARALELO" />
+            </Principal>
+            <Dependent Role="REGISTROACADEMICO">
+              <PropertyRef Name="ID_PARALELO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_REGISTRO_PERIODODE_PERIODOA">
+          <End Role="PERIODOACADEMICO" Type="Self.PERIODOACADEMICO" Multiplicity="1" />
+          <End Role="REGISTROACADEMICO" Type="Self.REGISTROACADEMICO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERIODOACADEMICO">
+              <PropertyRef Name="ID_PERIODOACADEMICO" />
+            </Principal>
+            <Dependent Role="REGISTROACADEMICO">
+              <PropertyRef Name="ID_PERIODOACADEMICO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TUTORIA_ESTUDIANT_REGISTRO">
+          <End Role="REGISTROACADEMICO" Type="Self.REGISTROACADEMICO" Multiplicity="1" />
+          <End Role="TUTORIA" Type="Self.TUTORIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="REGISTROACADEMICO">
+              <PropertyRef Name="ID_DOCENTE" />
+              <PropertyRef Name="ID_PERIODOACADEMICO" />
+              <PropertyRef Name="ID_ESTADOESTUDIANTE" />
+              <PropertyRef Name="ID_PARALELO" />
+              <PropertyRef Name="ID_MATERIA" />
+              <PropertyRef Name="ID_ESTUDIANTE" />
+            </Principal>
+            <Dependent Role="TUTORIA">
+              <PropertyRef Name="ID_DOCENTE" />
+              <PropertyRef Name="ID_PERIODOACADEMICO" />
+              <PropertyRef Name="ID_ESTADOESTUDIANTE" />
+              <PropertyRef Name="ID_PARALELO" />
+              <PropertyRef Name="ID_MATERIA" />
+              <PropertyRef Name="ID_ESTUDIANTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="TutoriasModelStoreContainer">
+          <EntitySet Name="CARRERA" EntityType="Self.CARRERA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DOCENTE" EntityType="Self.DOCENTE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ESTADOESTUDIANTE" EntityType="Self.ESTADOESTUDIANTE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ESTADOPERIODO" EntityType="Self.ESTADOPERIODO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ESTUDIANTE" EntityType="Self.ESTUDIANTE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FACULTAD" EntityType="Self.FACULTAD" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HORASTUTORIA" EntityType="Self.HORASTUTORIA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MATERIA" EntityType="Self.MATERIA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NIVELMATERIA" EntityType="Self.NIVELMATERIA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PARALELO" EntityType="Self.PARALELO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PERIODOACADEMICO" EntityType="Self.PERIODOACADEMICO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="REGISTROACADEMICO" EntityType="Self.REGISTROACADEMICO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ROL" EntityType="Self.ROL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TUTORIA" EntityType="Self.TUTORIA" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_CARRERA_FACULTADA_FACULTAD" Association="Self.FK_CARRERA_FACULTADA_FACULTAD">
+            <End Role="FACULTAD" EntitySet="FACULTAD" />
+            <End Role="CARRERA" EntitySet="CARRERA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DOCENTE_COORDINA_DOCENTE" Association="Self.FK_DOCENTE_COORDINA_DOCENTE">
+            <End Role="DOCENTE" EntitySet="DOCENTE" />
+            <End Role="DOCENTE1" EntitySet="DOCENTE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DOCENTE_DOCENTE_P_CARRERA" Association="Self.FK_DOCENTE_DOCENTE_P_CARRERA">
+            <End Role="CARRERA" EntitySet="CARRERA" />
+            <End Role="DOCENTE" EntitySet="DOCENTE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DOCENTE_DOCENTETI_ROL" Association="Self.FK_DOCENTE_DOCENTETI_ROL">
+            <End Role="ROL" EntitySet="ROL" />
+            <End Role="DOCENTE" EntitySet="DOCENTE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HORASTUT_HORASTUTO_DOCENTE" Association="Self.FK_HORASTUT_HORASTUTO_DOCENTE">
+            <End Role="DOCENTE" EntitySet="DOCENTE" />
+            <End Role="HORASTUTORIA" EntitySet="HORASTUTORIA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HORASTUT_HORASTUTO_PERIODOA" Association="Self.FK_HORASTUT_HORASTUTO_PERIODOA">
+            <End Role="PERIODOACADEMICO" EntitySet="PERIODOACADEMICO" />
+            <End Role="HORASTUTORIA" EntitySet="HORASTUTORIA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MATERIA_RELACIONM_NIVELMAT" Association="Self.FK_MATERIA_RELACIONM_NIVELMAT">
+            <End Role="NIVELMATERIA" EntitySet="NIVELMATERIA" />
+            <End Role="MATERIA" EntitySet="MATERIA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PERIODOA_ESTADOPER_ESTADOPE" Association="Self.FK_PERIODOA_ESTADOPER_ESTADOPE">
+            <End Role="ESTADOPERIODO" EntitySet="ESTADOPERIODO" />
+            <End Role="PERIODOACADEMICO" EntitySet="PERIODOACADEMICO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_REGISTRO_DOCENTERE_DOCENTE" Association="Self.FK_REGISTRO_DOCENTERE_DOCENTE">
+            <End Role="DOCENTE" EntitySet="DOCENTE" />
+            <End Role="REGISTROACADEMICO" EntitySet="REGISTROACADEMICO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_REGISTRO_ESTADOEST_ESTADOES" Association="Self.FK_REGISTRO_ESTADOEST_ESTADOES">
+            <End Role="ESTADOESTUDIANTE" EntitySet="ESTADOESTUDIANTE" />
+            <End Role="REGISTROACADEMICO" EntitySet="REGISTROACADEMICO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_REGISTRO_ESTUDIANT_ESTUDIAN" Association="Self.FK_REGISTRO_ESTUDIANT_ESTUDIAN">
+            <End Role="ESTUDIANTE" EntitySet="ESTUDIANTE" />
+            <End Role="REGISTROACADEMICO" EntitySet="REGISTROACADEMICO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_REGISTRO_MATERIAFO_MATERIA" Association="Self.FK_REGISTRO_MATERIAFO_MATERIA">
+            <End Role="MATERIA" EntitySet="MATERIA" />
+            <End Role="REGISTROACADEMICO" EntitySet="REGISTROACADEMICO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_REGISTRO_PARALELOF_PARALELO" Association="Self.FK_REGISTRO_PARALELOF_PARALELO">
+            <End Role="PARALELO" EntitySet="PARALELO" />
+            <End Role="REGISTROACADEMICO" EntitySet="REGISTROACADEMICO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_REGISTRO_PERIODODE_PERIODOA" Association="Self.FK_REGISTRO_PERIODODE_PERIODOA">
+            <End Role="PERIODOACADEMICO" EntitySet="PERIODOACADEMICO" />
+            <End Role="REGISTROACADEMICO" EntitySet="REGISTROACADEMICO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TUTORIA_ESTUDIANT_REGISTRO" Association="Self.FK_TUTORIA_ESTUDIANT_REGISTRO">
+            <End Role="REGISTROACADEMICO" EntitySet="REGISTROACADEMICO" />
+            <End Role="TUTORIA" EntitySet="TUTORIA" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TutoriasModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="LogInEntities" annotation:LazyLoadingEnabled="true" >
+          <EntitySet Name="DOCENTE" EntityType="TutoriasModel.DOCENTE" />
+          <AssociationSet Name="FK_DOCENTE_COORDINA_DOCENTE" Association="TutoriasModel.FK_DOCENTE_COORDINA_DOCENTE">
+            <End Role="DOCENTE" EntitySet="DOCENTE" />
+            <End Role="DOCENTE1" EntitySet="DOCENTE" />
+          </AssociationSet>
+          <EntitySet Name="ROL" EntityType="TutoriasModel.ROL" />
+          <AssociationSet Name="FK_DOCENTE_DOCENTETI_ROL" Association="TutoriasModel.FK_DOCENTE_DOCENTETI_ROL">
+            <End Role="ROL" EntitySet="ROL" />
+            <End Role="DOCENTE" EntitySet="DOCENTE" />
+          </AssociationSet>
+          <EntitySet Name="CARRERA" EntityType="TutoriasModel.CARRERA" />
+          <EntitySet Name="ESTADOESTUDIANTE" EntityType="TutoriasModel.ESTADOESTUDIANTE" />
+          <EntitySet Name="ESTADOPERIODO" EntityType="TutoriasModel.ESTADOPERIODO" />
+          <EntitySet Name="ESTUDIANTE" EntityType="TutoriasModel.ESTUDIANTE" />
+          <EntitySet Name="FACULTAD" EntityType="TutoriasModel.FACULTAD" />
+          <EntitySet Name="MATERIA" EntityType="TutoriasModel.MATERIA" />
+          <EntitySet Name="NIVELMATERIA" EntityType="TutoriasModel.NIVELMATERIA" />
+          <EntitySet Name="PARALELO" EntityType="TutoriasModel.PARALELO" />
+          <EntitySet Name="PERIODOACADEMICO" EntityType="TutoriasModel.PERIODOACADEMICO" />
+          <EntitySet Name="REGISTROACADEMICO" EntityType="TutoriasModel.REGISTROACADEMICO" />
+          <EntitySet Name="TUTORIA" EntityType="TutoriasModel.TUTORIA" />
+          <AssociationSet Name="FK_CARRERA_FACULTADA_FACULTAD" Association="TutoriasModel.FK_CARRERA_FACULTADA_FACULTAD">
+            <End Role="FACULTAD" EntitySet="FACULTAD" />
+            <End Role="CARRERA" EntitySet="CARRERA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DOCENTE_DOCENTE_P_CARRERA" Association="TutoriasModel.FK_DOCENTE_DOCENTE_P_CARRERA">
+            <End Role="CARRERA" EntitySet="CARRERA" />
+            <End Role="DOCENTE" EntitySet="DOCENTE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_REGISTRO_DOCENTERE_DOCENTE" Association="TutoriasModel.FK_REGISTRO_DOCENTERE_DOCENTE">
+            <End Role="DOCENTE" EntitySet="DOCENTE" />
+            <End Role="REGISTROACADEMICO" EntitySet="REGISTROACADEMICO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_REGISTRO_ESTADOEST_ESTADOES" Association="TutoriasModel.FK_REGISTRO_ESTADOEST_ESTADOES">
+            <End Role="ESTADOESTUDIANTE" EntitySet="ESTADOESTUDIANTE" />
+            <End Role="REGISTROACADEMICO" EntitySet="REGISTROACADEMICO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PERIODOA_ESTADOPER_ESTADOPE" Association="TutoriasModel.FK_PERIODOA_ESTADOPER_ESTADOPE">
+            <End Role="ESTADOPERIODO" EntitySet="ESTADOPERIODO" />
+            <End Role="PERIODOACADEMICO" EntitySet="PERIODOACADEMICO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_REGISTRO_ESTUDIANT_ESTUDIAN" Association="TutoriasModel.FK_REGISTRO_ESTUDIANT_ESTUDIAN">
+            <End Role="ESTUDIANTE" EntitySet="ESTUDIANTE" />
+            <End Role="REGISTROACADEMICO" EntitySet="REGISTROACADEMICO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MATERIA_RELACIONM_NIVELMAT" Association="TutoriasModel.FK_MATERIA_RELACIONM_NIVELMAT">
+            <End Role="NIVELMATERIA" EntitySet="NIVELMATERIA" />
+            <End Role="MATERIA" EntitySet="MATERIA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_REGISTRO_MATERIAFO_MATERIA" Association="TutoriasModel.FK_REGISTRO_MATERIAFO_MATERIA">
+            <End Role="MATERIA" EntitySet="MATERIA" />
+            <End Role="REGISTROACADEMICO" EntitySet="REGISTROACADEMICO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_REGISTRO_PARALELOF_PARALELO" Association="TutoriasModel.FK_REGISTRO_PARALELOF_PARALELO">
+            <End Role="PARALELO" EntitySet="PARALELO" />
+            <End Role="REGISTROACADEMICO" EntitySet="REGISTROACADEMICO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_REGISTRO_PERIODODE_PERIODOA" Association="TutoriasModel.FK_REGISTRO_PERIODODE_PERIODOA">
+            <End Role="PERIODOACADEMICO" EntitySet="PERIODOACADEMICO" />
+            <End Role="REGISTROACADEMICO" EntitySet="REGISTROACADEMICO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TUTORIA_ESTUDIANT_REGISTRO" Association="TutoriasModel.FK_TUTORIA_ESTUDIANT_REGISTRO">
+            <End Role="REGISTROACADEMICO" EntitySet="REGISTROACADEMICO" />
+            <End Role="TUTORIA" EntitySet="TUTORIA" />
+          </AssociationSet>
+          <AssociationSet Name="HORASTUTORIA" Association="TutoriasModel.HORASTUTORIA">
+            <End Role="DOCENTE" EntitySet="DOCENTE" />
+            <End Role="PERIODOACADEMICO" EntitySet="PERIODOACADEMICO" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="DOCENTE">
+          <Key>
+            <PropertyRef Name="ID_DOCENTE" />
+          </Key>
+          <Property Name="ID_DOCENTE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_CARRERA" Type="Int32" Nullable="false" />
+          <Property Name="ID_COORDINADOR" Type="Int32" />
+          <Property Name="ID_ROL" Type="Int32" Nullable="false" />
+          <Property Name="PRIMERNOMBREDOCENTE" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="SEGUNDONOMBREDOCENTE" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="PRIMERAPELLIDODOCENTE" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="SEGUNDOAPELLIDODOCENTE" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="EMAILDOCENTE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CEDULADOCENTE" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="DOCENTE1" Relationship="TutoriasModel.FK_DOCENTE_COORDINA_DOCENTE" FromRole="DOCENTE" ToRole="DOCENTE1" />
+          <NavigationProperty Name="DOCENTE2" Relationship="TutoriasModel.FK_DOCENTE_COORDINA_DOCENTE" FromRole="DOCENTE1" ToRole="DOCENTE" />
+          <NavigationProperty Name="ROL" Relationship="TutoriasModel.FK_DOCENTE_DOCENTETI_ROL" FromRole="DOCENTE" ToRole="ROL" />
+          <NavigationProperty Name="CARRERA" Relationship="TutoriasModel.FK_DOCENTE_DOCENTE_P_CARRERA" FromRole="DOCENTE" ToRole="CARRERA" />
+          <NavigationProperty Name="REGISTROACADEMICO" Relationship="TutoriasModel.FK_REGISTRO_DOCENTERE_DOCENTE" FromRole="DOCENTE" ToRole="REGISTROACADEMICO" />
+          <NavigationProperty Name="PERIODOACADEMICO" Relationship="TutoriasModel.HORASTUTORIA" FromRole="DOCENTE" ToRole="PERIODOACADEMICO" />
+        </EntityType>
+        <Association Name="FK_DOCENTE_COORDINA_DOCENTE">
+          <End Type="TutoriasModel.DOCENTE" Role="DOCENTE" Multiplicity="0..1" />
+          <End Type="TutoriasModel.DOCENTE" Role="DOCENTE1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DOCENTE">
+              <PropertyRef Name="ID_DOCENTE" />
+            </Principal>
+            <Dependent Role="DOCENTE1">
+              <PropertyRef Name="ID_COORDINADOR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ROL">
+          <Key>
+            <PropertyRef Name="ID_ROL" />
+          </Key>
+          <Property Name="ID_ROL" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOMBREROL" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="DOCENTE" Relationship="TutoriasModel.FK_DOCENTE_DOCENTETI_ROL" FromRole="ROL" ToRole="DOCENTE" />
+        </EntityType>
+        <Association Name="FK_DOCENTE_DOCENTETI_ROL">
+          <End Type="TutoriasModel.ROL" Role="ROL" Multiplicity="1" />
+          <End Type="TutoriasModel.DOCENTE" Role="DOCENTE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ROL">
+              <PropertyRef Name="ID_ROL" />
+            </Principal>
+            <Dependent Role="DOCENTE">
+              <PropertyRef Name="ID_ROL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="CARRERA">
+          <Key>
+            <PropertyRef Name="ID_CARRERA" />
+          </Key>
+          <Property Name="ID_CARRERA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_FACULTAD" Type="Int32" Nullable="false" />
+          <Property Name="CODIGOAREACARRERA" Type="Int32" Nullable="false" />
+          <Property Name="CODIGOCARRERA" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="NOMBRECARRERA" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CODIGOFACULTADAREACARRERA" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="FACULTAD" Relationship="TutoriasModel.FK_CARRERA_FACULTADA_FACULTAD" FromRole="CARRERA" ToRole="FACULTAD" />
+          <NavigationProperty Name="DOCENTE" Relationship="TutoriasModel.FK_DOCENTE_DOCENTE_P_CARRERA" FromRole="CARRERA" ToRole="DOCENTE" />
+        </EntityType>
+        <EntityType Name="ESTADOESTUDIANTE">
+          <Key>
+            <PropertyRef Name="ID_ESTADOESTUDIANTE" />
+          </Key>
+          <Property Name="ID_ESTADOESTUDIANTE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOMBREESTADOESTUDIANTE" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="REGISTROACADEMICO" Relationship="TutoriasModel.FK_REGISTRO_ESTADOEST_ESTADOES" FromRole="ESTADOESTUDIANTE" ToRole="REGISTROACADEMICO" />
+        </EntityType>
+        <EntityType Name="ESTADOPERIODO">
+          <Key>
+            <PropertyRef Name="ID_ESTADOPERIODO" />
+          </Key>
+          <Property Name="ID_ESTADOPERIODO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOMBREESTADOPERIODO" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="PERIODOACADEMICO" Relationship="TutoriasModel.FK_PERIODOA_ESTADOPER_ESTADOPE" FromRole="ESTADOPERIODO" ToRole="PERIODOACADEMICO" />
+        </EntityType>
+        <EntityType Name="ESTUDIANTE">
+          <Key>
+            <PropertyRef Name="ID_ESTUDIANTE" />
+          </Key>
+          <Property Name="ID_ESTUDIANTE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PRIMERNOMBREESTUDIANTE" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SEGUNDONOMBREESTUDIANTE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="PRIMERAPELLIDOESTUDIANTE" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SEGUNDOAPELLIDO_ESTUDIANTE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="NUMEROMATRICULAESTUDIANTE" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="EMAILESTUDIANTE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CEDULAESTUDIANTE" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="REGISTROACADEMICO" Relationship="TutoriasModel.FK_REGISTRO_ESTUDIANT_ESTUDIAN" FromRole="ESTUDIANTE" ToRole="REGISTROACADEMICO" />
+        </EntityType>
+        <EntityType Name="FACULTAD">
+          <Key>
+            <PropertyRef Name="ID_FACULTAD" />
+          </Key>
+          <Property Name="ID_FACULTAD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOMBREFACULTAD" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CARRERA" Relationship="TutoriasModel.FK_CARRERA_FACULTADA_FACULTAD" FromRole="FACULTAD" ToRole="CARRERA" />
+        </EntityType>
+        <EntityType Name="MATERIA">
+          <Key>
+            <PropertyRef Name="ID_MATERIA" />
+          </Key>
+          <Property Name="ID_MATERIA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_NIVELMATERIA" Type="Int32" Nullable="false" />
+          <Property Name="NOMBREMATERIA" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SIGLAMATERIA" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="NIVELMATERIA" Relationship="TutoriasModel.FK_MATERIA_RELACIONM_NIVELMAT" FromRole="MATERIA" ToRole="NIVELMATERIA" />
+          <NavigationProperty Name="REGISTROACADEMICO" Relationship="TutoriasModel.FK_REGISTRO_MATERIAFO_MATERIA" FromRole="MATERIA" ToRole="REGISTROACADEMICO" />
+        </EntityType>
+        <EntityType Name="NIVELMATERIA">
+          <Key>
+            <PropertyRef Name="ID_NIVELMATERIA" />
+          </Key>
+          <Property Name="ID_NIVELMATERIA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NIVELMATERIA1" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="MATERIA" Relationship="TutoriasModel.FK_MATERIA_RELACIONM_NIVELMAT" FromRole="NIVELMATERIA" ToRole="MATERIA" />
+        </EntityType>
+        <EntityType Name="PARALELO">
+          <Key>
+            <PropertyRef Name="ID_PARALELO" />
+          </Key>
+          <Property Name="ID_PARALELO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOMBREPARALELO" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="REGISTROACADEMICO" Relationship="TutoriasModel.FK_REGISTRO_PARALELOF_PARALELO" FromRole="PARALELO" ToRole="REGISTROACADEMICO" />
+        </EntityType>
+        <EntityType Name="PERIODOACADEMICO">
+          <Key>
+            <PropertyRef Name="ID_PERIODOACADEMICO" />
+          </Key>
+          <Property Name="ID_PERIODOACADEMICO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_ESTADOPERIODO" Type="Int32" />
+          <Property Name="ANIOPERIODO" Type="String" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="PERIODO" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="FECHAINICIOPERIODO" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FECHAFINPERIODO" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="ESTADOPERIODO" Relationship="TutoriasModel.FK_PERIODOA_ESTADOPER_ESTADOPE" FromRole="PERIODOACADEMICO" ToRole="ESTADOPERIODO" />
+          <NavigationProperty Name="REGISTROACADEMICO" Relationship="TutoriasModel.FK_REGISTRO_PERIODODE_PERIODOA" FromRole="PERIODOACADEMICO" ToRole="REGISTROACADEMICO" />
+          <NavigationProperty Name="DOCENTE" Relationship="TutoriasModel.HORASTUTORIA" FromRole="PERIODOACADEMICO" ToRole="DOCENTE" />
+        </EntityType>
+        <EntityType Name="REGISTROACADEMICO">
+          <Key>
+            <PropertyRef Name="ID_DOCENTE" />
+            <PropertyRef Name="ID_PERIODOACADEMICO" />
+            <PropertyRef Name="ID_ESTADOESTUDIANTE" />
+            <PropertyRef Name="ID_PARALELO" />
+            <PropertyRef Name="ID_MATERIA" />
+            <PropertyRef Name="ID_ESTUDIANTE" />
+          </Key>
+          <Property Name="ID_DOCENTE" Type="Int32" Nullable="false" />
+          <Property Name="ID_PERIODOACADEMICO" Type="Int32" Nullable="false" />
+          <Property Name="ID_ESTADOESTUDIANTE" Type="Int32" Nullable="false" />
+          <Property Name="ID_PARALELO" Type="Int32" Nullable="false" />
+          <Property Name="ID_MATERIA" Type="Int32" Nullable="false" />
+          <Property Name="ID_ESTUDIANTE" Type="Int32" Nullable="false" />
+          <Property Name="NOTAPROGRESO1" Type="Decimal" Precision="3" Scale="1" />
+          <Property Name="NOTAPROGRESO2" Type="Decimal" Precision="3" Scale="1" />
+          <Property Name="NOTAEXAMENFINAL" Type="Decimal" Precision="3" Scale="1" />
+          <Property Name="TIPOMATRICULA" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="DOCENTE" Relationship="TutoriasModel.FK_REGISTRO_DOCENTERE_DOCENTE" FromRole="REGISTROACADEMICO" ToRole="DOCENTE" />
+          <NavigationProperty Name="ESTADOESTUDIANTE" Relationship="TutoriasModel.FK_REGISTRO_ESTADOEST_ESTADOES" FromRole="REGISTROACADEMICO" ToRole="ESTADOESTUDIANTE" />
+          <NavigationProperty Name="ESTUDIANTE" Relationship="TutoriasModel.FK_REGISTRO_ESTUDIANT_ESTUDIAN" FromRole="REGISTROACADEMICO" ToRole="ESTUDIANTE" />
+          <NavigationProperty Name="MATERIA" Relationship="TutoriasModel.FK_REGISTRO_MATERIAFO_MATERIA" FromRole="REGISTROACADEMICO" ToRole="MATERIA" />
+          <NavigationProperty Name="PARALELO" Relationship="TutoriasModel.FK_REGISTRO_PARALELOF_PARALELO" FromRole="REGISTROACADEMICO" ToRole="PARALELO" />
+          <NavigationProperty Name="PERIODOACADEMICO" Relationship="TutoriasModel.FK_REGISTRO_PERIODODE_PERIODOA" FromRole="REGISTROACADEMICO" ToRole="PERIODOACADEMICO" />
+          <NavigationProperty Name="TUTORIA" Relationship="TutoriasModel.FK_TUTORIA_ESTUDIANT_REGISTRO" FromRole="REGISTROACADEMICO" ToRole="TUTORIA" />
+        </EntityType>
+        <EntityType Name="TUTORIA">
+          <Key>
+            <PropertyRef Name="ID_TUTORIA" />
+          </Key>
+          <Property Name="ID_TUTORIA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_DOCENTE" Type="Int32" Nullable="false" />
+          <Property Name="ID_PERIODOACADEMICO" Type="Int32" Nullable="false" />
+          <Property Name="ID_ESTADOESTUDIANTE" Type="Int32" Nullable="false" />
+          <Property Name="ID_PARALELO" Type="Int32" Nullable="false" />
+          <Property Name="ID_MATERIA" Type="Int32" Nullable="false" />
+          <Property Name="ID_ESTUDIANTE" Type="Int32" Nullable="false" />
+          <Property Name="TEMATUTORIA" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="FECHATUTORIA" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TIEMPOTUTORIA" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="REGISTROACADEMICO" Relationship="TutoriasModel.FK_TUTORIA_ESTUDIANT_REGISTRO" FromRole="TUTORIA" ToRole="REGISTROACADEMICO" />
+        </EntityType>
+        <Association Name="FK_CARRERA_FACULTADA_FACULTAD">
+          <End Type="TutoriasModel.FACULTAD" Role="FACULTAD" Multiplicity="1" />
+          <End Type="TutoriasModel.CARRERA" Role="CARRERA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FACULTAD">
+              <PropertyRef Name="ID_FACULTAD" />
+            </Principal>
+            <Dependent Role="CARRERA">
+              <PropertyRef Name="ID_FACULTAD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DOCENTE_DOCENTE_P_CARRERA">
+          <End Type="TutoriasModel.CARRERA" Role="CARRERA" Multiplicity="1" />
+          <End Type="TutoriasModel.DOCENTE" Role="DOCENTE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CARRERA">
+              <PropertyRef Name="ID_CARRERA" />
+            </Principal>
+            <Dependent Role="DOCENTE">
+              <PropertyRef Name="ID_CARRERA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_REGISTRO_DOCENTERE_DOCENTE">
+          <End Type="TutoriasModel.DOCENTE" Role="DOCENTE" Multiplicity="1" />
+          <End Type="TutoriasModel.REGISTROACADEMICO" Role="REGISTROACADEMICO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DOCENTE">
+              <PropertyRef Name="ID_DOCENTE" />
+            </Principal>
+            <Dependent Role="REGISTROACADEMICO">
+              <PropertyRef Name="ID_DOCENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_REGISTRO_ESTADOEST_ESTADOES">
+          <End Type="TutoriasModel.ESTADOESTUDIANTE" Role="ESTADOESTUDIANTE" Multiplicity="1" />
+          <End Type="TutoriasModel.REGISTROACADEMICO" Role="REGISTROACADEMICO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ESTADOESTUDIANTE">
+              <PropertyRef Name="ID_ESTADOESTUDIANTE" />
+            </Principal>
+            <Dependent Role="REGISTROACADEMICO">
+              <PropertyRef Name="ID_ESTADOESTUDIANTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PERIODOA_ESTADOPER_ESTADOPE">
+          <End Type="TutoriasModel.ESTADOPERIODO" Role="ESTADOPERIODO" Multiplicity="0..1" />
+          <End Type="TutoriasModel.PERIODOACADEMICO" Role="PERIODOACADEMICO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ESTADOPERIODO">
+              <PropertyRef Name="ID_ESTADOPERIODO" />
+            </Principal>
+            <Dependent Role="PERIODOACADEMICO">
+              <PropertyRef Name="ID_ESTADOPERIODO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_REGISTRO_ESTUDIANT_ESTUDIAN">
+          <End Type="TutoriasModel.ESTUDIANTE" Role="ESTUDIANTE" Multiplicity="1" />
+          <End Type="TutoriasModel.REGISTROACADEMICO" Role="REGISTROACADEMICO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ESTUDIANTE">
+              <PropertyRef Name="ID_ESTUDIANTE" />
+            </Principal>
+            <Dependent Role="REGISTROACADEMICO">
+              <PropertyRef Name="ID_ESTUDIANTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MATERIA_RELACIONM_NIVELMAT">
+          <End Type="TutoriasModel.NIVELMATERIA" Role="NIVELMATERIA" Multiplicity="1" />
+          <End Type="TutoriasModel.MATERIA" Role="MATERIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NIVELMATERIA">
+              <PropertyRef Name="ID_NIVELMATERIA" />
+            </Principal>
+            <Dependent Role="MATERIA">
+              <PropertyRef Name="ID_NIVELMATERIA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_REGISTRO_MATERIAFO_MATERIA">
+          <End Type="TutoriasModel.MATERIA" Role="MATERIA" Multiplicity="1" />
+          <End Type="TutoriasModel.REGISTROACADEMICO" Role="REGISTROACADEMICO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MATERIA">
+              <PropertyRef Name="ID_MATERIA" />
+            </Principal>
+            <Dependent Role="REGISTROACADEMICO">
+              <PropertyRef Name="ID_MATERIA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_REGISTRO_PARALELOF_PARALELO">
+          <End Type="TutoriasModel.PARALELO" Role="PARALELO" Multiplicity="1" />
+          <End Type="TutoriasModel.REGISTROACADEMICO" Role="REGISTROACADEMICO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PARALELO">
+              <PropertyRef Name="ID_PARALELO" />
+            </Principal>
+            <Dependent Role="REGISTROACADEMICO">
+              <PropertyRef Name="ID_PARALELO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_REGISTRO_PERIODODE_PERIODOA">
+          <End Type="TutoriasModel.PERIODOACADEMICO" Role="PERIODOACADEMICO" Multiplicity="1" />
+          <End Type="TutoriasModel.REGISTROACADEMICO" Role="REGISTROACADEMICO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERIODOACADEMICO">
+              <PropertyRef Name="ID_PERIODOACADEMICO" />
+            </Principal>
+            <Dependent Role="REGISTROACADEMICO">
+              <PropertyRef Name="ID_PERIODOACADEMICO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TUTORIA_ESTUDIANT_REGISTRO">
+          <End Type="TutoriasModel.REGISTROACADEMICO" Role="REGISTROACADEMICO" Multiplicity="1" />
+          <End Type="TutoriasModel.TUTORIA" Role="TUTORIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="REGISTROACADEMICO">
+              <PropertyRef Name="ID_DOCENTE" />
+              <PropertyRef Name="ID_PERIODOACADEMICO" />
+              <PropertyRef Name="ID_ESTADOESTUDIANTE" />
+              <PropertyRef Name="ID_PARALELO" />
+              <PropertyRef Name="ID_MATERIA" />
+              <PropertyRef Name="ID_ESTUDIANTE" />
+            </Principal>
+            <Dependent Role="TUTORIA">
+              <PropertyRef Name="ID_DOCENTE" />
+              <PropertyRef Name="ID_PERIODOACADEMICO" />
+              <PropertyRef Name="ID_ESTADOESTUDIANTE" />
+              <PropertyRef Name="ID_PARALELO" />
+              <PropertyRef Name="ID_MATERIA" />
+              <PropertyRef Name="ID_ESTUDIANTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="HORASTUTORIA">
+          <End Type="TutoriasModel.DOCENTE" Role="DOCENTE" Multiplicity="*" />
+          <End Type="TutoriasModel.PERIODOACADEMICO" Role="PERIODOACADEMICO" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TutoriasModelStoreContainer" CdmEntityContainer="LogInEntities" >
+          <EntitySetMapping Name="DOCENTE">
+            <EntityTypeMapping TypeName="TutoriasModel.DOCENTE">
+              <MappingFragment StoreEntitySet="DOCENTE">
+                <ScalarProperty Name="CEDULADOCENTE" ColumnName="CEDULADOCENTE" />
+                <ScalarProperty Name="EMAILDOCENTE" ColumnName="EMAILDOCENTE" />
+                <ScalarProperty Name="SEGUNDOAPELLIDODOCENTE" ColumnName="SEGUNDOAPELLIDODOCENTE" />
+                <ScalarProperty Name="PRIMERAPELLIDODOCENTE" ColumnName="PRIMERAPELLIDODOCENTE" />
+                <ScalarProperty Name="SEGUNDONOMBREDOCENTE" ColumnName="SEGUNDONOMBREDOCENTE" />
+                <ScalarProperty Name="PRIMERNOMBREDOCENTE" ColumnName="PRIMERNOMBREDOCENTE" />
+                <ScalarProperty Name="ID_ROL" ColumnName="ID_ROL" />
+                <ScalarProperty Name="ID_COORDINADOR" ColumnName="ID_COORDINADOR" />
+                <ScalarProperty Name="ID_CARRERA" ColumnName="ID_CARRERA" />
+                <ScalarProperty Name="ID_DOCENTE" ColumnName="ID_DOCENTE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ROL">
+            <EntityTypeMapping TypeName="TutoriasModel.ROL">
+              <MappingFragment StoreEntitySet="ROL">
+                <ScalarProperty Name="NOMBREROL" ColumnName="NOMBREROL" />
+                <ScalarProperty Name="ID_ROL" ColumnName="ID_ROL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CARRERA">
+            <EntityTypeMapping TypeName="TutoriasModel.CARRERA">
+              <MappingFragment StoreEntitySet="CARRERA">
+                <ScalarProperty Name="CODIGOFACULTADAREACARRERA" ColumnName="CODIGOFACULTADAREACARRERA" />
+                <ScalarProperty Name="NOMBRECARRERA" ColumnName="NOMBRECARRERA" />
+                <ScalarProperty Name="CODIGOCARRERA" ColumnName="CODIGOCARRERA" />
+                <ScalarProperty Name="CODIGOAREACARRERA" ColumnName="CODIGOAREACARRERA" />
+                <ScalarProperty Name="ID_FACULTAD" ColumnName="ID_FACULTAD" />
+                <ScalarProperty Name="ID_CARRERA" ColumnName="ID_CARRERA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ESTADOESTUDIANTE">
+            <EntityTypeMapping TypeName="TutoriasModel.ESTADOESTUDIANTE">
+              <MappingFragment StoreEntitySet="ESTADOESTUDIANTE">
+                <ScalarProperty Name="NOMBREESTADOESTUDIANTE" ColumnName="NOMBREESTADOESTUDIANTE" />
+                <ScalarProperty Name="ID_ESTADOESTUDIANTE" ColumnName="ID_ESTADOESTUDIANTE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ESTADOPERIODO">
+            <EntityTypeMapping TypeName="TutoriasModel.ESTADOPERIODO">
+              <MappingFragment StoreEntitySet="ESTADOPERIODO">
+                <ScalarProperty Name="NOMBREESTADOPERIODO" ColumnName="NOMBREESTADOPERIODO" />
+                <ScalarProperty Name="ID_ESTADOPERIODO" ColumnName="ID_ESTADOPERIODO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ESTUDIANTE">
+            <EntityTypeMapping TypeName="TutoriasModel.ESTUDIANTE">
+              <MappingFragment StoreEntitySet="ESTUDIANTE">
+                <ScalarProperty Name="CEDULAESTUDIANTE" ColumnName="CEDULAESTUDIANTE" />
+                <ScalarProperty Name="EMAILESTUDIANTE" ColumnName="EMAILESTUDIANTE" />
+                <ScalarProperty Name="NUMEROMATRICULAESTUDIANTE" ColumnName="NUMEROMATRICULAESTUDIANTE" />
+                <ScalarProperty Name="SEGUNDOAPELLIDO_ESTUDIANTE" ColumnName="SEGUNDOAPELLIDO_ESTUDIANTE" />
+                <ScalarProperty Name="PRIMERAPELLIDOESTUDIANTE" ColumnName="PRIMERAPELLIDOESTUDIANTE" />
+                <ScalarProperty Name="SEGUNDONOMBREESTUDIANTE" ColumnName="SEGUNDONOMBREESTUDIANTE" />
+                <ScalarProperty Name="PRIMERNOMBREESTUDIANTE" ColumnName="PRIMERNOMBREESTUDIANTE" />
+                <ScalarProperty Name="ID_ESTUDIANTE" ColumnName="ID_ESTUDIANTE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FACULTAD">
+            <EntityTypeMapping TypeName="TutoriasModel.FACULTAD">
+              <MappingFragment StoreEntitySet="FACULTAD">
+                <ScalarProperty Name="NOMBREFACULTAD" ColumnName="NOMBREFACULTAD" />
+                <ScalarProperty Name="ID_FACULTAD" ColumnName="ID_FACULTAD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MATERIA">
+            <EntityTypeMapping TypeName="TutoriasModel.MATERIA">
+              <MappingFragment StoreEntitySet="MATERIA">
+                <ScalarProperty Name="SIGLAMATERIA" ColumnName="SIGLAMATERIA" />
+                <ScalarProperty Name="NOMBREMATERIA" ColumnName="NOMBREMATERIA" />
+                <ScalarProperty Name="ID_NIVELMATERIA" ColumnName="ID_NIVELMATERIA" />
+                <ScalarProperty Name="ID_MATERIA" ColumnName="ID_MATERIA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NIVELMATERIA">
+            <EntityTypeMapping TypeName="TutoriasModel.NIVELMATERIA">
+              <MappingFragment StoreEntitySet="NIVELMATERIA">
+                <ScalarProperty Name="NIVELMATERIA1" ColumnName="NIVELMATERIA" />
+                <ScalarProperty Name="ID_NIVELMATERIA" ColumnName="ID_NIVELMATERIA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PARALELO">
+            <EntityTypeMapping TypeName="TutoriasModel.PARALELO">
+              <MappingFragment StoreEntitySet="PARALELO">
+                <ScalarProperty Name="NOMBREPARALELO" ColumnName="NOMBREPARALELO" />
+                <ScalarProperty Name="ID_PARALELO" ColumnName="ID_PARALELO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PERIODOACADEMICO">
+            <EntityTypeMapping TypeName="TutoriasModel.PERIODOACADEMICO">
+              <MappingFragment StoreEntitySet="PERIODOACADEMICO">
+                <ScalarProperty Name="FECHAFINPERIODO" ColumnName="FECHAFINPERIODO" />
+                <ScalarProperty Name="FECHAINICIOPERIODO" ColumnName="FECHAINICIOPERIODO" />
+                <ScalarProperty Name="PERIODO" ColumnName="PERIODO" />
+                <ScalarProperty Name="ANIOPERIODO" ColumnName="ANIOPERIODO" />
+                <ScalarProperty Name="ID_ESTADOPERIODO" ColumnName="ID_ESTADOPERIODO" />
+                <ScalarProperty Name="ID_PERIODOACADEMICO" ColumnName="ID_PERIODOACADEMICO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="REGISTROACADEMICO">
+            <EntityTypeMapping TypeName="TutoriasModel.REGISTROACADEMICO">
+              <MappingFragment StoreEntitySet="REGISTROACADEMICO">
+                <ScalarProperty Name="TIPOMATRICULA" ColumnName="TIPOMATRICULA" />
+                <ScalarProperty Name="NOTAEXAMENFINAL" ColumnName="NOTAEXAMENFINAL" />
+                <ScalarProperty Name="NOTAPROGRESO2" ColumnName="NOTAPROGRESO2" />
+                <ScalarProperty Name="NOTAPROGRESO1" ColumnName="NOTAPROGRESO1" />
+                <ScalarProperty Name="ID_ESTUDIANTE" ColumnName="ID_ESTUDIANTE" />
+                <ScalarProperty Name="ID_MATERIA" ColumnName="ID_MATERIA" />
+                <ScalarProperty Name="ID_PARALELO" ColumnName="ID_PARALELO" />
+                <ScalarProperty Name="ID_ESTADOESTUDIANTE" ColumnName="ID_ESTADOESTUDIANTE" />
+                <ScalarProperty Name="ID_PERIODOACADEMICO" ColumnName="ID_PERIODOACADEMICO" />
+                <ScalarProperty Name="ID_DOCENTE" ColumnName="ID_DOCENTE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TUTORIA">
+            <EntityTypeMapping TypeName="TutoriasModel.TUTORIA">
+              <MappingFragment StoreEntitySet="TUTORIA">
+                <ScalarProperty Name="TIEMPOTUTORIA" ColumnName="TIEMPOTUTORIA" />
+                <ScalarProperty Name="FECHATUTORIA" ColumnName="FECHATUTORIA" />
+                <ScalarProperty Name="TEMATUTORIA" ColumnName="TEMATUTORIA" />
+                <ScalarProperty Name="ID_ESTUDIANTE" ColumnName="ID_ESTUDIANTE" />
+                <ScalarProperty Name="ID_MATERIA" ColumnName="ID_MATERIA" />
+                <ScalarProperty Name="ID_PARALELO" ColumnName="ID_PARALELO" />
+                <ScalarProperty Name="ID_ESTADOESTUDIANTE" ColumnName="ID_ESTADOESTUDIANTE" />
+                <ScalarProperty Name="ID_PERIODOACADEMICO" ColumnName="ID_PERIODOACADEMICO" />
+                <ScalarProperty Name="ID_DOCENTE" ColumnName="ID_DOCENTE" />
+                <ScalarProperty Name="ID_TUTORIA" ColumnName="ID_TUTORIA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="HORASTUTORIA" TypeName="TutoriasModel.HORASTUTORIA" StoreEntitySet="HORASTUTORIA">
+            <EndProperty Name="PERIODOACADEMICO">
+              <ScalarProperty Name="ID_PERIODOACADEMICO" ColumnName="ID_PERIODOACADEMICO" />
+            </EndProperty>
+            <EndProperty Name="DOCENTE">
+              <ScalarProperty Name="ID_DOCENTE" ColumnName="ID_DOCENTE" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
