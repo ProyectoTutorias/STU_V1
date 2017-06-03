@@ -40,6 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsNCarrera.cs" />
+    <Compile Include="clsNDocente.cs" />
+    <Compile Include="clsNEstudiante.cs" />
+    <Compile Include="clsNFacultad.cs" />
+    <Compile Include="clsNMateria.cs" />
+    <Compile Include="clsNParalelo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

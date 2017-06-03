@@ -5,3 +5,15 @@ D:\OneDrive - Universidad de Las Américas\Universidad\6to Semestre\STU\STU_V1\s
 D:\OneDrive - Universidad de Las Américas\Universidad\6to Semestre\STU\STU_V1\slnSTU\CapaDatos\obj\Debug\CapaDatos.csprojResolveAssemblyReference.cache
 D:\OneDrive - Universidad de Las Américas\Universidad\6to Semestre\STU\STU_V1\slnSTU\CapaDatos\obj\Debug\CapaDatos.dll
 D:\OneDrive - Universidad de Las Américas\Universidad\6to Semestre\STU\STU_V1\slnSTU\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Users\Paulo\Source\Repos\STU_V1\slnSTU\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\Paulo\Source\Repos\STU_V1\slnSTU\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\Paulo\Source\Repos\STU_V1\slnSTU\CapaDatos\bin\Debug\CapaEntidades.dll
+C:\Users\Paulo\Source\Repos\STU_V1\slnSTU\CapaDatos\bin\Debug\CapaEntidades.pdb
+C:\Users\Paulo\Source\Repos\STU_V1\slnSTU\CapaDatos\obj\Debug\CapaDatos.csprojResolveAssemblyReference.cache
+C:\Users\Paulo\Source\Repos\STU_V1\slnSTU\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\Paulo\Source\Repos\STU_V1\slnSTU\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Users\Paulo\Source\Repos\STU_V1\slnSTU\CapaDatos\bin\Debug\CapaDatos.dll.config
+C:\Users\Paulo\Source\Repos\STU_V1\slnSTU\CapaDatos\bin\Debug\EntityFramework.dll
+C:\Users\Paulo\Source\Repos\STU_V1\slnSTU\CapaDatos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Paulo\Source\Repos\STU_V1\slnSTU\CapaDatos\bin\Debug\EntityFramework.xml
+C:\Users\Paulo\Source\Repos\STU_V1\slnSTU\CapaDatos\bin\Debug\EntityFramework.SqlServer.xml

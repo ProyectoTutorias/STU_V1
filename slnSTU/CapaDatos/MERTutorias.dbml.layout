@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 14, 19.625" name="MERTutorias">
+  <DataContextMoniker Name="/MERTutoriasDataContext" />
+  <nestedChildShapes>
+    <classShape Id="666e31c2-9081-4e93-adf8-5370d500112f" absoluteBounds="3.5, 4.125, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/MERTutoriasDataContext/CARRERA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b0c020ec-27d7-49da-a3bd-fd4ff8f6e5d4" absoluteBounds="3.515, 4.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0f419450-49d7-4c7e-9f4f-931d130a0922" absoluteBounds="6.25, 3.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/MERTutoriasDataContext/DOCENTE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ad87d75b-8e53-44f4-8147-b934a0d4eb4a" absoluteBounds="6.265, 4.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f3a4b343-16c3-4c60-afc0-d14f0f23ed49" absoluteBounds="6.25, 8, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/MERTutoriasDataContext/ESTADOESTUDIANTE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c566281a-5d57-4449-b236-9f9c67b93e3b" absoluteBounds="6.265, 8.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5727a80e-01fa-4d1b-acb9-1793bb46fd5f" absoluteBounds="3.5, 14.625, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/MERTutoriasDataContext/ESTADOPERIODO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="122ea093-ee73-4727-bf06-a3fe04ea1f44" absoluteBounds="3.515, 15.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2ed7eae3-ba95-45f4-bb97-50e2845667a7" absoluteBounds="6.25, 17, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/MERTutoriasDataContext/ESTUDIANTE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a2245f5f-33e7-4f8c-8c25-49e497848e59" absoluteBounds="6.265, 17.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c0bb3de5-ab1a-49e5-80f3-581074fc615d" absoluteBounds="0.75, 4.5, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/MERTutoriasDataContext/FACULTAD" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c87090c1-43e7-4e29-b01e-fa1e6d630aef" absoluteBounds="0.765, 4.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d257df91-587a-43a2-842f-b793b7dcca3d" absoluteBounds="9, 4.5, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/MERTutoriasDataContext/HORASTUTORIA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="84b55ffc-ceca-45ab-b706-3bd1e6e4956f" absoluteBounds="9.015, 4.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ceffab0d-f2be-4074-b5af-03f02bfa7a1a" absoluteBounds="6.25, 12, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/MERTutoriasDataContext/MATERIA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dd531df5-db2a-4998-85c2-1f0305054ae9" absoluteBounds="6.265, 12.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c5fc892f-0f54-45c6-86e0-6e249d5ed30d" absoluteBounds="3.5, 12.125, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/MERTutoriasDataContext/NIVELMATERIA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1b14c39d-bd05-4e16-97a5-7b2c8a925623" absoluteBounds="3.515, 12.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6f42c0b0-228e-404c-9787-93624e2c3ad8" absoluteBounds="6.25, 10, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/MERTutoriasDataContext/PARALELO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="82f0539c-bece-47bb-a45d-d69837cf6867" absoluteBounds="6.265, 10.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="444d267a-5b31-4f2d-ac08-fa145484b96f" absoluteBounds="6.25, 14.25, 2, 1.9631982421874969">
+      <DataClassMoniker Name="/MERTutoriasDataContext/PERIODOACADEMICO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c98bacc7-8722-42e4-80fa-b71ae984cee8" absoluteBounds="6.265, 14.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="83ea8414-0d91-402e-abbb-604b0b6313fa" absoluteBounds="9, 0.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/MERTutoriasDataContext/REGISTROACADEMICO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="56fdbbd2-86ea-4529-b257-6544b04f631d" absoluteBounds="9.015, 1.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c7f2e24f-a201-4ce1-8961-62c2dea59329" absoluteBounds="3.5, 1.5, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/MERTutoriasDataContext/ROL" />
+      <nestedChildShapes>
+        <elementListCompartment Id="42db59db-b33b-4555-b00a-d164fa912906" absoluteBounds="3.515, 1.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b6753d2b-d9a6-4e8f-aa89-0f0830ff2080" absoluteBounds="11.75, 5.625, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/MERTutoriasDataContext/TUTORIA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="04f54d3e-1426-41c3-8594-234618611192" absoluteBounds="11.765, 6.085, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.95923076923077 : 6.48240397135417); (6.95923076923077 : 6.73240397135417); (7.55461538461539 : 6.73240397135417); (7.55461538461539 : 6.48240397135417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MERTutoriasDataContext/DOCENTE/DOCENTE_DOCENTE" />
+      <nodes>
+        <classShapeMoniker Id="0f419450-49d7-4c7e-9f4f-931d130a0922" />
+        <classShapeMoniker Id="0f419450-49d7-4c7e-9f4f-931d130a0922" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 5.10659912109375); (6.25 : 5.10659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MERTutoriasDataContext/CARRERA/CARRERA_DOCENTE" />
+      <nodes>
+        <classShapeMoniker Id="666e31c2-9081-4e93-adf8-5370d500112f" />
+        <classShapeMoniker Id="0f419450-49d7-4c7e-9f4f-931d130a0922" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 5.09699625651042); (3.5 : 5.09699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MERTutoriasDataContext/FACULTAD/FACULTAD_CARRERA" />
+      <nodes>
+        <classShapeMoniker Id="c0bb3de5-ab1a-49e5-80f3-581074fc615d" />
+        <classShapeMoniker Id="666e31c2-9081-4e93-adf8-5370d500112f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 5.09699625651042); (8.54166666666667 : 5.09699625651042 : JumpStart); (8.98958333333333 : 5.09699625651042 : JumpEnd); (9 : 5.09699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MERTutoriasDataContext/DOCENTE/DOCENTE_HORASTUTORIA" />
+      <nodes>
+        <classShapeMoniker Id="0f419450-49d7-4c7e-9f4f-931d130a0922" />
+        <classShapeMoniker Id="d257df91-587a-43a2-842f-b793b7dcca3d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 12.7219962565104); (6.25 : 12.7219962565104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MERTutoriasDataContext/NIVELMATERIA/NIVELMATERIA_MATERIA" />
+      <nodes>
+        <classShapeMoniker Id="c5fc892f-0f54-45c6-86e0-6e249d5ed30d" />
+        <classShapeMoniker Id="ceffab0d-f2be-4074-b5af-03f02bfa7a1a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 15.2315991210937); (8.72916666666667 : 15.2315991210937 : JumpStart); (8.89583333333333 : 15.2315991210937 : JumpEnd); (10 : 15.2315991210937); (10 : 5.69399251302083)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MERTutoriasDataContext/PERIODOACADEMICO/PERIODOACADEMICO_HORASTUTORIA" />
+      <nodes>
+        <classShapeMoniker Id="444d267a-5b31-4f2d-ac08-fa145484b96f" />
+        <classShapeMoniker Id="d257df91-587a-43a2-842f-b793b7dcca3d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 15.2219962565104); (6.25 : 15.2219962565104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MERTutoriasDataContext/ESTADOPERIODO/ESTADOPERIODO_PERIODOACADEMICO" />
+      <nodes>
+        <classShapeMoniker Id="5727a80e-01fa-4d1b-acb9-1793bb46fd5f" />
+        <classShapeMoniker Id="444d267a-5b31-4f2d-ac08-fa145484b96f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.25 : 3.75); (7.25 : 2.11620198567708); (8.57291666666667 : 2.11620198567708 : JumpStart); (8.89583333333333 : 2.11620198567708 : JumpEnd); (9 : 2.11620198567708)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MERTutoriasDataContext/DOCENTE/DOCENTE_REGISTROACADEMICO" />
+      <nodes>
+        <classShapeMoniker Id="0f419450-49d7-4c7e-9f4f-931d130a0922" />
+        <classShapeMoniker Id="83ea8414-0d91-402e-abbb-604b0b6313fa" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 8); (8.625 : 7.625); (8.625 : 2.83055497851562); (8.72916666666667 : 2.83055497851562 : JumpStart); (8.98958333333333 : 2.83055497851562 : JumpEnd); (9 : 2.83055497851562)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MERTutoriasDataContext/ESTADOESTUDIANTE/ESTADOESTUDIANTE_REGISTROACADEMICO" />
+      <nodes>
+        <classShapeMoniker Id="f3a4b343-16c3-4c60-afc0-d14f0f23ed49" />
+        <classShapeMoniker Id="83ea8414-0d91-402e-abbb-604b0b6313fa" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 17.0615374615385); (8.8125 : 16.4990374615385); (8.8125 : 1.40184899283854); (9 : 1.40184899283854)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MERTutoriasDataContext/ESTUDIANTE/ESTUDIANTE_REGISTROACADEMICO" />
+      <nodes>
+        <classShapeMoniker Id="2ed7eae3-ba95-45f4-bb97-50e2845667a7" />
+        <classShapeMoniker Id="83ea8414-0d91-402e-abbb-604b0b6313fa" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 12.0619285109675); (8.6875 : 11.6244285109675); (8.6875 : 3.1877314749349); (8.72916666666667 : 3.18773147493489 : JumpStart); (8.98958333333333 : 3.1877314749349 : JumpEnd); (9 : 3.1877314749349)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MERTutoriasDataContext/MATERIA/MATERIA_REGISTROACADEMICO" />
+      <nodes>
+        <classShapeMoniker Id="ceffab0d-f2be-4074-b5af-03f02bfa7a1a" />
+        <classShapeMoniker Id="83ea8414-0d91-402e-abbb-604b0b6313fa" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 10.0312264964944); (8.59732443490112 : 9.68390206159327 : JumpStart); (8.74642556509888 : 9.53480093139551 : JumpEnd); (8.75357443490112 : 9.52765206159327 : JumpStart); (8.87142556509888 : 9.40980093139551 : JumpEnd); (8.90625 : 9.37497649649439); (8.90625 : 2.47337848209635); (9 : 2.47337848209635)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MERTutoriasDataContext/PARALELO/PARALELO_REGISTROACADEMICO" />
+      <nodes>
+        <classShapeMoniker Id="6f42c0b0-228e-404c-9787-93624e2c3ad8" />
+        <classShapeMoniker Id="83ea8414-0d91-402e-abbb-604b0b6313fa" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 14.2802020498798); (8.65625 : 13.8739520498798); (8.65625 : 1.75902548925781); (8.72916666666667 : 1.75902548925781 : JumpStart); (8.89583333333333 : 1.75902548925781 : JumpEnd); (9 : 1.75902548925781)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MERTutoriasDataContext/PERIODOACADEMICO/PERIODOACADEMICO_REGISTROACADEMICO" />
+      <nodes>
+        <classShapeMoniker Id="444d267a-5b31-4f2d-ac08-fa145484b96f" />
+        <classShapeMoniker Id="83ea8414-0d91-402e-abbb-604b0b6313fa" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 1.80810099283854); (6.7187475 : 1.80810099283854); (6.7187475 : 3.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MERTutoriasDataContext/ROL/ROL_DOCENTE" />
+      <nodes>
+        <classShapeMoniker Id="c7f2e24f-a201-4ce1-8961-62c2dea59329" />
+        <classShapeMoniker Id="0f419450-49d7-4c7e-9f4f-931d130a0922" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11 : 2.11620198567708); (12.75 : 2.11620198567708); (12.75 : 5.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MERTutoriasDataContext/REGISTROACADEMICO/REGISTROACADEMICO_TUTORIA" />
+      <nodes>
+        <classShapeMoniker Id="83ea8414-0d91-402e-abbb-604b0b6313fa" />
+        <classShapeMoniker Id="b6753d2b-d9a6-4e8f-aa89-0f0830ff2080" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

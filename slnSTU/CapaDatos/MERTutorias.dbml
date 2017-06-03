@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="dbTutorias" Class="MERTutoriasDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=dbTutorias;Integrated Security=True" SettingsObjectName="CapaDatos.Properties.Settings" SettingsPropertyName="dbTutoriasConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CARRERA" Member="CARRERAs">
+    <Type Name="CARRERA">
+      <Column Name="ID_CARRERA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_FACULTAD" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CODIGOAREACARRERA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CODIGOCARRERA" Type="System.String" DbType="Char(3) NOT NULL" CanBeNull="false" />
+      <Column Name="NOMBRECARRERA" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CODIGOFACULTADAREACARRERA" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Association Name="CARRERA_DOCENTE" Member="DOCENTEs" ThisKey="ID_CARRERA" OtherKey="ID_CARRERA" Type="DOCENTE" />
+      <Association Name="FACULTAD_CARRERA" Member="FACULTAD" ThisKey="ID_FACULTAD" OtherKey="ID_FACULTAD" Type="FACULTAD" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DOCENTE" Member="DOCENTEs">
+    <Type Name="DOCENTE">
+      <Column Name="ID_DOCENTE" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_CARRERA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_COORDINADOR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_ROL" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PRIMERNOMBREDOCENTE" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="SEGUNDONOMBREDOCENTE" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="PRIMERAPELLIDODOCENTE" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="SEGUNDOAPELLIDODOCENTE" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="EMAILDOCENTE" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="CEDULADOCENTE" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Association Name="DOCENTE_DOCENTE" Member="DOCENTEs" ThisKey="ID_DOCENTE" OtherKey="ID_COORDINADOR" Type="DOCENTE" />
+      <Association Name="DOCENTE_HORASTUTORIA" Member="HORASTUTORIAs" ThisKey="ID_DOCENTE" OtherKey="ID_DOCENTE" Type="HORASTUTORIA" />
+      <Association Name="DOCENTE_REGISTROACADEMICO" Member="REGISTROACADEMICOs" ThisKey="ID_DOCENTE" OtherKey="ID_DOCENTE" Type="REGISTROACADEMICO" />
+      <Association Name="DOCENTE_DOCENTE" Member="DOCENTE1" ThisKey="ID_COORDINADOR" OtherKey="ID_DOCENTE" Type="DOCENTE" IsForeignKey="true" />
+      <Association Name="CARRERA_DOCENTE" Member="CARRERA" ThisKey="ID_CARRERA" OtherKey="ID_CARRERA" Type="CARRERA" IsForeignKey="true" />
+      <Association Name="ROL_DOCENTE" Member="ROL" ThisKey="ID_ROL" OtherKey="ID_ROL" Type="ROL" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESTADOESTUDIANTE" Member="ESTADOESTUDIANTEs">
+    <Type Name="ESTADOESTUDIANTE">
+      <Column Name="ID_ESTADOESTUDIANTE" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOMBREESTADOESTUDIANTE" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="ESTADOESTUDIANTE_REGISTROACADEMICO" Member="REGISTROACADEMICOs" ThisKey="ID_ESTADOESTUDIANTE" OtherKey="ID_ESTADOESTUDIANTE" Type="REGISTROACADEMICO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESTADOPERIODO" Member="ESTADOPERIODOs">
+    <Type Name="ESTADOPERIODO">
+      <Column Name="ID_ESTADOPERIODO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOMBREESTADOPERIODO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="ESTADOPERIODO_PERIODOACADEMICO" Member="PERIODOACADEMICOs" ThisKey="ID_ESTADOPERIODO" OtherKey="ID_ESTADOPERIODO" Type="PERIODOACADEMICO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESTUDIANTE" Member="ESTUDIANTEs">
+    <Type Name="ESTUDIANTE">
+      <Column Name="ID_ESTUDIANTE" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PRIMERNOMBREESTUDIANTE" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="SEGUNDONOMBREESTUDIANTE" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="PRIMERAPELLIDOESTUDIANTE" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="SEGUNDOAPELLIDO_ESTUDIANTE" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="NUMEROMATRICULAESTUDIANTE" Type="System.String" DbType="Char(6) NOT NULL" CanBeNull="false" />
+      <Column Name="EMAILESTUDIANTE" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="CEDULAESTUDIANTE" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="ESTUDIANTE_REGISTROACADEMICO" Member="REGISTROACADEMICOs" ThisKey="ID_ESTUDIANTE" OtherKey="ID_ESTUDIANTE" Type="REGISTROACADEMICO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FACULTAD" Member="FACULTADs">
+    <Type Name="FACULTAD">
+      <Column Name="ID_FACULTAD" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOMBREFACULTAD" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="FACULTAD_CARRERA" Member="CARRERAs" ThisKey="ID_FACULTAD" OtherKey="ID_FACULTAD" Type="CARRERA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HORASTUTORIA" Member="HORASTUTORIAs">
+    <Type Name="HORASTUTORIA">
+      <Column Name="ID_DOCENTE" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_PERIODOACADEMICO" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="DOCENTE_HORASTUTORIA" Member="DOCENTE" ThisKey="ID_DOCENTE" OtherKey="ID_DOCENTE" Type="DOCENTE" IsForeignKey="true" />
+      <Association Name="PERIODOACADEMICO_HORASTUTORIA" Member="PERIODOACADEMICO" ThisKey="ID_PERIODOACADEMICO" OtherKey="ID_PERIODOACADEMICO" Type="PERIODOACADEMICO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MATERIA" Member="MATERIAs">
+    <Type Name="MATERIA">
+      <Column Name="ID_MATERIA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_NIVELMATERIA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NOMBREMATERIA" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SIGLAMATERIA" Type="System.String" DbType="Char(6) NOT NULL" CanBeNull="false" />
+      <Association Name="MATERIA_REGISTROACADEMICO" Member="REGISTROACADEMICOs" ThisKey="ID_MATERIA" OtherKey="ID_MATERIA" Type="REGISTROACADEMICO" />
+      <Association Name="NIVELMATERIA_MATERIA" Member="NIVELMATERIA" ThisKey="ID_NIVELMATERIA" OtherKey="ID_NIVELMATERIA" Type="NIVELMATERIA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NIVELMATERIA" Member="NIVELMATERIAs">
+    <Type Name="NIVELMATERIA">
+      <Column Name="ID_NIVELMATERIA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NIVELMATERIA" Member="NIVELMATERIA1" Type="System.String" DbType="Char(2) NOT NULL" CanBeNull="false" />
+      <Association Name="NIVELMATERIA_MATERIA" Member="MATERIAs" ThisKey="ID_NIVELMATERIA" OtherKey="ID_NIVELMATERIA" Type="MATERIA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PARALELO" Member="PARALELOs">
+    <Type Name="PARALELO">
+      <Column Name="ID_PARALELO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOMBREPARALELO" Type="System.String" DbType="Char(2) NOT NULL" CanBeNull="false" />
+      <Association Name="PARALELO_REGISTROACADEMICO" Member="REGISTROACADEMICOs" ThisKey="ID_PARALELO" OtherKey="ID_PARALELO" Type="REGISTROACADEMICO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PERIODOACADEMICO" Member="PERIODOACADEMICOs">
+    <Type Name="PERIODOACADEMICO">
+      <Column Name="ID_PERIODOACADEMICO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_ESTADOPERIODO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ANIOPERIODO" Type="System.String" DbType="Char(4) NOT NULL" CanBeNull="false" />
+      <Column Name="PERIODO" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="FECHAINICIOPERIODO" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FECHAFINPERIODO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="PERIODOACADEMICO_HORASTUTORIA" Member="HORASTUTORIAs" ThisKey="ID_PERIODOACADEMICO" OtherKey="ID_PERIODOACADEMICO" Type="HORASTUTORIA" />
+      <Association Name="PERIODOACADEMICO_REGISTROACADEMICO" Member="REGISTROACADEMICOs" ThisKey="ID_PERIODOACADEMICO" OtherKey="ID_PERIODOACADEMICO" Type="REGISTROACADEMICO" />
+      <Association Name="ESTADOPERIODO_PERIODOACADEMICO" Member="ESTADOPERIODO" ThisKey="ID_ESTADOPERIODO" OtherKey="ID_ESTADOPERIODO" Type="ESTADOPERIODO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.REGISTROACADEMICO" Member="REGISTROACADEMICOs">
+    <Type Name="REGISTROACADEMICO">
+      <Column Name="ID_DOCENTE" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_PERIODOACADEMICO" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_ESTADOESTUDIANTE" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_PARALELO" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_MATERIA" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_ESTUDIANTE" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NOTAPROGRESO1" Type="System.Decimal" DbType="Decimal(3,1)" CanBeNull="true" />
+      <Column Name="NOTAPROGRESO2" Type="System.Decimal" DbType="Decimal(3,1)" CanBeNull="true" />
+      <Column Name="NOTAEXAMENFINAL" Type="System.Decimal" DbType="Decimal(3,1)" CanBeNull="true" />
+      <Column Name="TIPOMATRICULA" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Association Name="REGISTROACADEMICO_TUTORIA" Member="TUTORIAs" ThisKey="ID_DOCENTE,ID_PERIODOACADEMICO,ID_ESTADOESTUDIANTE,ID_PARALELO,ID_MATERIA,ID_ESTUDIANTE" OtherKey="ID_DOCENTE,ID_PERIODOACADEMICO,ID_ESTADOESTUDIANTE,ID_PARALELO,ID_MATERIA,ID_ESTUDIANTE" Type="TUTORIA" />
+      <Association Name="DOCENTE_REGISTROACADEMICO" Member="DOCENTE" ThisKey="ID_DOCENTE" OtherKey="ID_DOCENTE" Type="DOCENTE" IsForeignKey="true" />
+      <Association Name="ESTADOESTUDIANTE_REGISTROACADEMICO" Member="ESTADOESTUDIANTE" ThisKey="ID_ESTADOESTUDIANTE" OtherKey="ID_ESTADOESTUDIANTE" Type="ESTADOESTUDIANTE" IsForeignKey="true" />
+      <Association Name="ESTUDIANTE_REGISTROACADEMICO" Member="ESTUDIANTE" ThisKey="ID_ESTUDIANTE" OtherKey="ID_ESTUDIANTE" Type="ESTUDIANTE" IsForeignKey="true" />
+      <Association Name="MATERIA_REGISTROACADEMICO" Member="MATERIA" ThisKey="ID_MATERIA" OtherKey="ID_MATERIA" Type="MATERIA" IsForeignKey="true" />
+      <Association Name="PARALELO_REGISTROACADEMICO" Member="PARALELO" ThisKey="ID_PARALELO" OtherKey="ID_PARALELO" Type="PARALELO" IsForeignKey="true" />
+      <Association Name="PERIODOACADEMICO_REGISTROACADEMICO" Member="PERIODOACADEMICO" ThisKey="ID_PERIODOACADEMICO" OtherKey="ID_PERIODOACADEMICO" Type="PERIODOACADEMICO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ROL" Member="ROLs">
+    <Type Name="ROL">
+      <Column Name="ID_ROL" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOMBREROL" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="ROL_DOCENTE" Member="DOCENTEs" ThisKey="ID_ROL" OtherKey="ID_ROL" Type="DOCENTE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TUTORIA" Member="TUTORIAs">
+    <Type Name="TUTORIA">
+      <Column Name="ID_TUTORIA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_DOCENTE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_PERIODOACADEMICO" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_ESTADOESTUDIANTE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_PARALELO" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_MATERIA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_ESTUDIANTE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TEMATUTORIA" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="FECHATUTORIA" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="TIEMPOTUTORIA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="REGISTROACADEMICO_TUTORIA" Member="REGISTROACADEMICO" ThisKey="ID_DOCENTE,ID_PERIODOACADEMICO,ID_ESTADOESTUDIANTE,ID_PARALELO,ID_MATERIA,ID_ESTUDIANTE" OtherKey="ID_DOCENTE,ID_PERIODOACADEMICO,ID_ESTADOESTUDIANTE,ID_PARALELO,ID_MATERIA,ID_ESTUDIANTE" Type="REGISTROACADEMICO" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
