@@ -96,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Administrador\frmDefault.aspx" />
+    <Content Include="Administrador\frmManejoDocentes.aspx" />
     <Content Include="Docente\frmDefault.aspx" />
     <Content Include="Recursos\CSS\estilos.css" />
     <Content Include="Recursos\CSS\font-awesome.css" />
@@ -135,6 +136,13 @@
     </Compile>
     <Compile Include="Administrador\frmDefault.aspx.designer.cs">
       <DependentUpon>frmDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmManejoDocentes.aspx.cs">
+      <DependentUpon>frmManejoDocentes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmManejoDocentes.aspx.designer.cs">
+      <DependentUpon>frmManejoDocentes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Docente\frmDefault.aspx.cs">
       <DependentUpon>frmDefault.aspx</DependentUpon>

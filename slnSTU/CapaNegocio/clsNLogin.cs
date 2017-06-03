@@ -29,5 +29,37 @@ namespace CapaNegocio
             return docente;
             
         }
+
+        public string N_rutaMaster(DOCENTE docente)
+        {
+            switch (docente.ID_ROL)
+            {
+
+                ///Administrador
+                case 1:
+                    return "Administrador/frmDefault.aspx";
+
+
+                //Director
+                case 2:
+                    return "Administrador/frmDefault.aspx";
+
+
+                //Seguimiento
+                case 3:
+                    return "Administrador/frmDefault.aspx";
+
+
+                //Docente
+                case 4:
+                    return "Docente/frmDefault.aspx";
+
+
+                //El docente no tiene asignado un rol
+                default:
+                    return "frmError.aspx"; ///Pendiente de implementacion
+
+            }
+        }
     }
 }

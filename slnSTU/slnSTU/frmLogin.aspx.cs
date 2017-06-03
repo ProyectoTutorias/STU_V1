@@ -30,58 +30,34 @@ namespace slnSTU
                 //Autenticacion del sistema
                 if (Login.N_autenticarUsuario(txtUsuario.Text))
                 {
-                    //Se almacena toda la informacion del docente en la varible session
-                    Session["Docente"] = Login.N_infoDocente(txtUsuario.Text);
+                    //Se carga la informacion del docente
+                    DOCENTE docente = Login.N_infoDocente(txtUsuario.Text);                    
 
 
-                    //Cast de la variable session para obtener datos del docente
-                    DOCENTE docente = (DOCENTE)Session["Docente"];
-
-                    //Seleccion del master page al que va a ser dirigido el usuario
-                    switch (docente.ID_ROL)
-                    {
-
-                        ///Administrador
-                        case 1:
-                            Response.Redirect("~/frmLogOut.aspx");
-                            break;
+                    //Se almancena informacion importante en la varibale cast
+                    Session["Docente"] = docente;
+                    Session["Rol"] = docente.ID_ROL;
 
 
-                        //Director
-                        case 2:
-                            Response.Redirect("~/frmLogOut.aspx");
-                            break;
+                    //Seleccionar ruta a la cual sera dirigido el docente
+                    string ruta = Login.N_rutaMaster(docente);
 
-
-                        //Seguimiento
-                        case 3:
-                            Response.Redirect("~/frmLogOut.aspx");
-                            break;
-
-
-                        //Docente
-                        case 4:
-                            Response.Redirect("~/frmLogOut.aspx");
-                            break;
-
-
-                        //El docente no tiene asignado un rol
-                        default:
-                            Response.Redirect("~/frmLogOut.aspx"); ///Pendiente de implementacion
-                            break;
-                    }
+                    //Redireccionamiento al master page
+                    Response.Redirect(ruta);                    
                     
                 }
                 else
                 {
                     //Correo no registrado en el sistema
                     ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Correo proporcionado no se encuentra en el sistema.')", true);
+                    txtContrasena.Text = ""; //Limpia el campo de contrasenia
                 }
             }
             else
             {
                 //Correo o clave incorrecta
                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Correo/Contraseña incorrecta(s).')", true);
+                txtContrasena.Text = ""; //Limpia el campo de contrasenia
             }
         }
     }

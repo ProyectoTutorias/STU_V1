@@ -52,6 +52,8 @@
     <Compile Include="CARRERA.cs">
       <DependentUpon>LogInModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="clsDAdministrador.cs" />
+    <Compile Include="clsDDocente.cs" />
     <Compile Include="clsDLogin.cs" />
     <Compile Include="DOCENTE.cs">
       <DependentUpon>LogInModel.tt</DependentUpon>
