@@ -10,6 +10,5 @@ C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\CapaEntidades\obj\
 C:\Users\viana\Documents\Visual Studio 2017\Git\STU_V1\slnSTU\CapaEntidades\obj\Debug\CapaEntidades.pdb
 C:\Users\carme\Documents\GitHub\STU_V1\slnSTU\CapaEntidades\bin\Debug\CapaEntidades.dll
 C:\Users\carme\Documents\GitHub\STU_V1\slnSTU\CapaEntidades\bin\Debug\CapaEntidades.pdb
-C:\Users\carme\Documents\GitHub\STU_V1\slnSTU\CapaEntidades\obj\Debug\CapaEntidades.csprojResolveAssemblyReference.cache
 C:\Users\carme\Documents\GitHub\STU_V1\slnSTU\CapaEntidades\obj\Debug\CapaEntidades.dll
 C:\Users\carme\Documents\GitHub\STU_V1\slnSTU\CapaEntidades\obj\Debug\CapaEntidades.pdb

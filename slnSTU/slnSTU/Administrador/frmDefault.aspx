@@ -2,60 +2,41 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <p>
-        Se puede obeservar que el cine maneja un costo variable bajo, es decir qu el costo unitario del producto es bajo, sin embargo tiene un costo fijo muy elevado por lo que el cine debe elaborar una gran cantidad de combos en un mes para poder superar su punto de equilibrio que son 1754 unidades. Por lo que sugerimos que se aumente el precio de venta a 9 dolares reduciendo la canitdad de equilibrio en mas de 300 unidades. Tambié se puden reducir los costos fijos, ayudando de igual manera a reducir el núm</p>
-    <p>
-    </p>
-    <p>
-        Se puede obeservar que el cine maneja un costo variable bajo, es decir qu el costo unitario del producto es bajo, sin embargo tiene un costo fijo muy elevado por lo que el cine debe elaborar una gran cantidad de combos en un mes para poder superar su punto de equilibrio que son 1754 unidades. Por lo que sugerimos que se aumente el precio de venta a 9 dolares reduciendo la canitdad de equilibrio en mas de 300 unidades. Tambié se puden reducir los costos fijos, ayudando de igual manera a reducir el núm</p>
-    <p>
-        &nbsp;</p>
-    <p>
-        Se puede obeservar que el cine maneja un costo variable bajo, es decir qu el costo unitario del producto es bajo, sin embargo tiene un costo fijo muy elevado por lo que el cine debe elaborar una gran cantidad de combos en un mes para poder superar su punto de equilibrio que son 1754 unidades. Por lo que sugerimos que se aumente el precio de venta a 9 dolares reduciendo la canitdad de equilibrio en mas de 300 unidades. Tambié se puden reducir los costos fijos, ayudando de igual manera a reducir el núm</p>
-    <p>
-        &nbsp;</p>
-    <p>
-        Se puede obeservar que el cine maneja un costo variable bajo, es decir qu el costo unitario del producto es bajo, sin embargo tiene un costo fijo muy elevado por lo que el cine debe elaborar una gran cantidad de combos en un mes para poder superar su punto de equilibrio que son 1754 unidades. Por lo que sugerimos que se aumente el precio de venta a 9 dolares reduciendo la canitdad de equilibrio en mas de 300 unidades. Tambié se puden reducir los costos fijos, ayudando de igual manera a reducir el núm</p>
-    <p>
-        &nbsp;</p>
-    <p>
-        Se puede obeservar que el cine maneja un costo variable bajo, es decir qu el costo unitario del producto es bajo, sin embargo tiene un costo fijo muy elevado por lo que el cine debe elaborar una gran cantidad de combos en un mes para poder superar su punto de equilibrio que son 1754 unidades. Por lo que sugerimos que se aumente el precio de venta a 9 dolares reduciendo la canitdad de equilibrio en mas de 300 unidades. Tambié se puden reducir los costos fijos, ayudando de igual manera a reducir el núm</p>
-    <p>
-        Se puede obeservar que el cine maneja un costo variable bajo, es decir qu el costo unitario del producto es bajo, sin embargo tiene un costo fijo muy elevado por lo que el cine debe elaborar una gran cantidad de combos en un mes para poder superar su punto de equilibrio que son 1754 unidades. Por lo que sugerimos que se aumente el precio de venta a 9 dolares reduciendo la canitdad de equilibrio en mas de 300 unidades. Tambié se puden reducir los costos fijos, ayudando de igual manera a reducir el núm</p>
-    <p>
-        &nbsp;</p>
-    <p>
-        Se puede obeservar que el cine maneja un costo variable bajo, es decir qu el costo unitario del producto es bajo, sin embargo tiene un costo fijo muy elevado por lo que el cine debe elaborar una gran cantidad de combos en un mes para poder superar su punto de equilibrio que son 1754 unidades. Por lo que sugerimos que se aumente el precio de venta a 9 dolares reduciendo la canitdad de equilibrio en mas de 300 unidades. Tambié se puden reducir los costos fijos, ayudando de igual manera a reducir el núm</p>
-    <p>
-        &nbsp;</p>
-    <p>
-        Se puede obeservar que el cine maneja un costo variable bajo, es decir qu el costo unitario del producto es bajo, sin embargo tiene un costo fijo muy elevado por lo que el cine debe elaborar una gran cantidad de combos en un mes para poder superar su punto de equilibrio que son 1754 unidades. Por lo que sugerimos que se aumente el precio de venta a 9 dolares reduciendo la canitdad de equilibrio en mas de 300 unidades. Tambié se puden reducir los costos fijos, ayudando de igual manera a reducir el núm</p>
-    <p>
-        &nbsp;</p>
-    <p>
-        Se puede obeservar que el cine maneja un costo variable bajo, es decir qu el costo unitario del producto es bajo, sin embargo tiene un costo fijo muy elevado por lo que el cine debe elaborar una gran cantidad de combos en un mes para poder superar su punto de equilibrio que son 1754 unidades. Por lo que sugerimos que se aumente el precio de venta a 9 dolares reduciendo la canitdad de equilibrio en mas de 300 unidades. Tambié se puden reducir los costos fijos, ayudando de igual manera a reducir el núm</p>
-    <p>
-        &nbsp;</p>
-    <p>
-        Se puede obeservar que el cine maneja un costo variable bajo, es decir qu el costo unitario del producto es bajo, sin embargo tiene un costo fijo muy elevado por lo que el cine debe elaborar una gran cantidad de combos en un mes para poder superar su punto de equilibrio que son 1754 unidades. Por lo que sugerimos que se aumente el precio de venta a 9 dolares reduciendo la canitdad de equilibrio en mas de 300 unidades. Tambié se puden reducir los costos fijos, ayudando de igual manera a reducir el núm</p>
-    <p>
-        &nbsp;</p>
-    <p>
-        Se puede obeservar que el cine maneja un costo variable bajo, es decir qu el costo unitario del producto es bajo, sin embargo tiene un costo fijo muy elevado por lo que el cine debe elaborar una gran cantidad de combos en un mes para poder superar su punto de equilibrio que son 1754 unidades. Por lo que sugerimos que se aumente el precio de venta a 9 dolares reduciendo la canitdad de equilibrio en mas de 300 unidades. Tambié se puden reducir los costos fijos, ayudando de igual manera a reducir el núm</p>
-    <p>
-        &nbsp;</p>
-    <p>
-        Se puede obeservar que el cine maneja un costo variable bajo, es decir qu el costo unitario del producto es bajo, sin embargo tiene un costo fijo muy elevado por lo que el cine debe elaborar una gran cantidad de combos en un mes para poder superar su punto de equilibrio que son 1754 unidades. Por lo que sugerimos que se aumente el precio de venta a 9 dolares reduciendo la canitdad de equilibrio en mas de 300 unidades. Tambié se puden reducir los costos fijos, ayudando de igual manera a reducir el núm</p>
-    <p>
-        &nbsp;</p>
-    <p>
-        Se puede obeservar que el cine maneja un costo variable bajo, es decir qu el costo unitario del producto es bajo, sin embargo tiene un costo fijo muy elevado por lo que el cine debe elaborar una gran cantidad de combos en un mes para poder superar su punto de equilibrio que son 1754 unidades. Por lo que sugerimos que se aumente el precio de venta a 9 dolares reduciendo la canitdad de equilibrio en mas de 300 unidades. Tambié se puden reducir los costos fijos, ayudando de igual manera a reducir el núm</p>
-    <p>
-        &nbsp;</p>
-    <p>
-        Se puede obeservar que el cine maneja un costo variable bajo, es decir qu el costo unitario del producto es bajo, sin embargo tiene un costo fijo muy elevado por lo que el cine debe elaborar una gran cantidad de combos en un mes para poder superar su punto de equilibrio que son 1754 unidades. Por lo que sugerimos que se aumente el precio de venta a 9 dolares reduciendo la canitdad de equilibrio en mas de 300 unidades. Tambié se puden reducir los costos fijos, ayudando de igual manera a reducir el núm</p>
-    <p>
-        &nbsp;</p>
-    <p>
-        Se puede obeservar que el cine maneja un costo variable bajo, es decir qu el costo unitario del producto es bajo, sin embargo tiene un costo fijo muy elevado por lo que el cine debe elaborar una gran cantidad de combos en un mes para poder superar su punto de equilibrio que son 1754 unidades. Por lo que sugerimos que se aumente el precio de venta a 9 dolares reduciendo la canitdad de equilibrio en mas de 300 unidades. Tambié se puden reducir los costos fijos, ayudando de igual manera a reducir el núm</p>
+    <table style="width:100%;">
+        <tr>
+            <td colspan="3" style="text-align: center">Mis Paralelos</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <asp:GridView ID="gvParalelos" runat="server" Width="100%">
+                </asp:GridView>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
 </asp:Content>
